@@ -6,7 +6,7 @@
 <title>Satoshium — Workspace</title>
 <style>
 :root{
- --card-wm: url('https://satoshiumai.github.io/satoshium-info/assets/seal.png');
+ --card-wm: url('/assets/seal.png');
  --bg:#07090d;
  --panel:#0c1018;
  --text:#e8edf7;
@@ -81,7 +81,7 @@ ul{margin:8px 0 0 18px}
 <body id="top">
 <div id="topbar-container"></div>
 <script>
-fetch("https://satoshiumai.github.io/satoshium-info/topbar.html")
+fetch("/topbar.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("topbar-container").innerHTML = data;
@@ -151,9 +151,9 @@ openly, and in full view.
 
 <div id="footer-container"></div>
 
-<script src="https://satoshiumai.github.io/satoshium-info/assets/sayings.js"></script>
+<script src="/assets/sayings.js"></script>
 <script>
-fetch("https://satoshiumai.github.io/satoshium-info/footer.html")
+fetch("/footer.html")
  .then(response => response.text())
  .then(data => {
  document.getElementById("footer-container").innerHTML = data;
