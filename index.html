@@ -20,9 +20,16 @@ html,body{
   margin:0;padding:0;background:var(--bg);color:var(--text);
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55
 }
- body{
+body{
  padding-top:80px;
 }
+
+.reflection{
+ margin-top:40px;
+ margin-bottom:40px;
+ color:var(--muted);
+}
+
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
@@ -134,12 +141,16 @@ openly, and in full view.
 <a href="/workspace/temp/">Open Folder</a>
 </div>
 
+</main>                     
+<div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
   Satoshium is being built slowly, in public, and with architectural discipline.
 </div>
 <hr />
+
 <div id="footer-container"></div>
+
 <script src="/satoshium-info/assets/sayings.js"></script>
 <script>
 fetch("/satoshium-info/footer.html")
@@ -148,6 +159,5 @@ fetch("/satoshium-info/footer.html")
  document.getElementById("footer-container").innerHTML = data;
  });
 </script>
-</main>
 </body>
 </html>
