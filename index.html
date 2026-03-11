@@ -186,21 +186,12 @@ fetch("/topbar.html")
 
     const path = window.location.pathname.toLowerCase();
 
-    function setActive(key){
+        function setActive(key){
       const el = document.querySelector(`.topbar .nav a[data-nav="${key}"]`);
       if (el) el.classList.add("active");
     }
 
-    if (path.includes("satoshium.info")) setActive("info");
-    else if (path.includes("/workspace/repos/")) setActive("repos");
-    else if (path.includes("/workspace/ui/")) setActive("ui");
-    else if (path.includes("/workspace/architecture/")) setActive("architecture");
-    else if (path.includes("/workspace/temp/")) setActive("temp");
-    else if (path.includes("/workspace/")) setActive("workspace");
-    else setActive("debug");
-  });
-
- setActive("info);
+    setActive("info);
   });
 </script>
 
