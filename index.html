@@ -137,7 +137,6 @@ hr{border:none;border-top:1px solid var(--line);margin:22px 0}
   grid-template-columns:repeat(3,1fr);
   gap:16px
 }
- 
 .note{
   margin-top:10px;
   padding:12px 14px;
@@ -186,12 +185,12 @@ fetch("/topbar.html")
 
     const path = window.location.pathname.toLowerCase();
 
-        function setActive(key){
+    function setActive(key){
       const el = document.querySelector(`.topbar .nav a[data-nav="${key}"]`);
       if (el) el.classList.add("active");
     }
 
-    setActive("info);
+    setActive("info");
   });
 </script>
 
