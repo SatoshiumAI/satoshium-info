@@ -128,12 +128,7 @@ fetch("https://satoshium.link/components/topbar.html")
       if (el) el.classList.add("active");
     }
 
-    if (path.includes("/workspace/debug/")) setActive("debug");
-    else if (path.includes("/workspace/repos/")) setActive("repos");
-    else if (path.includes("/workspace/ui/")) setActive("ui");
-    else if (path.includes("/workspace/architecture/")) setActive("architecture");
-    else if (path.includes("/workspace/temp/")) setActive("temp");
-    else setActive("home");
+    setActive("workplace");
   });
 </script>
 
