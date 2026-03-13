@@ -163,6 +163,10 @@ hr{border:none;border-top:1px solid var(--line);margin:22px 0}
   color:var(--text);
   font-size:12px;
 }
+ .span-2{
+  grid-column: 1 / -1;
+}
+
 .mini{font-size:13px}
 ul{margin:8px 0 0 18px}
 
@@ -227,6 +231,15 @@ fetch("/topbar.html")
 </section>
 
 <div class="grid-2">
+ <div class="span-2" id="domain-layers"></div>
+
+<script>
+fetch("https://satoshium.link/components/domain-layers.html")
+ .then(r => r.text())
+ .then(data => {
+ document.getElementById("domain-layers").innerHTML = data;
+ });
+</script>
 
   <div class="card">
     <h2>Why Satoshium Info Exists</h2>
