@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Satoshium • Bitcoin History & Origins</title>
+
+<style>
+
+/* ===== Core Theme ===== */
+
+:root{
+ --card-wm: url('https://satoshium.link/assets/btc-seal.png');
+ --bg:#07090d;
+ --panel:#0c1018;
+ --text:#e8edf7;
+ --muted:#9aa7bd;
+ --gold:#d6a34a;
+ --gold2:#f4c36a;
+ --line:rgba(214,163,74,.18);
+}
+
+*{box-sizing:border-box}
+
+html,body{
+margin:0;
+padding:0;
+background:var(--bg);
+color:var(--text);
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+line-height:1.55
+}
+body{
+ padding-top:80px;
+}
+
+.reflection{
+ margin-top:40px;
+ margin-bottom:40px;
+ color:var(--muted);
+}
+
+a{color:var(--gold2);text-decoration:none}
+a:hover{color:var(--gold)}
+
+.wrap{max-width:980px;margin:0 auto;padding:0 18px}
+
+/* ===== Layout ===== */
+
+.content{
+padding:34px 18px 60px
+}
+
+h1,h2{
+margin:0 0 10px
+}
+
+h1{
+font-size:30px;
+color:var(--gold2)
+}
+
+h2{
+font-size:20px;
+color:var(--gold2);
+margin-top:26px
+}
+
+p,li{
+color:var(--text)
+}
+
+hr{
+border:none;
+border-top:1px solid var(--line);
+margin:22px 0
+}
+
+/* ===== Cards ===== */
+
+.card{
+position: relative;
+overflow: hidden;
+
+background: linear-gradient(
+to bottom right,
+rgba(12,16,24,.94),
+rgba(12,16,24,.88)
+);
+
+border:1px solid var(--line);
+border-radius:16px;
+
+padding:16px 16px;
+margin:16px 0;
+
+box-shadow:
+0 0 0 1px rgba(214,163,74,.08),
+0 20px 50px rgba(0,0,0,.45);
+}
+
+.card::before{
+content:"";
+position:absolute;
+inset:-60px;
+background-image: var(--card-wm);
+background-repeat:no-repeat;
+background-size: min(720px, 70vw);
+background-position: right -140px center;
+opacity:0.028;
+filter: blur(1px);
+pointer-events:none;
+z-index:0;
+}
+
+.card > *{
+position:relative;
+z-index:1
+}
+.card {
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+.card {
+ border: 1px solid rgba(214,163,74,.15);
+}
+
+.muted{
+color:var(--muted)
+}
+
+.footer{
+border-top:1px solid var(--line);
+padding:18px 0 32px;
+color:var(--muted)
+}
+
+/* ===== Pills ===== */
+
+.pill{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:8px 10px;
+border:1px solid var(--line);
+border-radius:999px;
+background:rgba(214,163,74,.08);
+color:var(--gold2);
+font-size:12px;
+font-weight:700
+}
+
+ul{
+margin:8px 0 0 18px
+}
+
+</style>
+</head>
+
+<body id="top">
+
+<div id="topbar-slot"></div>
+<script src="https://satoshium.link/components/topbar-loader.js"></script>
+  
+  <main class="wrap content">
+    <div class="pill">🟠 Bitcoin 101</div>
+
+    <h1 style="margin-top:12px;">Bitcoin: History & Origins</h1>
+    <p class="muted">
+      Bitcoin didn’t appear out of nowhere. It emerged from decades of work on cryptography, digital cash,
+      and the problem of creating money that doesn’t require trust in a central authority.
+    </p>
+
+    <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+      <h2>1) The world before Bitcoin</h2>
+      <p class="muted">
+        Before 2008, many people tried to build “digital cash.” The hard part wasn’t making coins — it was making
+        a system that prevented double-spending <em>without</em> a central operator.
+      </p>
+
+      <div class="grid2">
+        <div class="callout">
+          <h3>What kept failing?</h3>
+          <ul>
+            <li><strong>Central points of control</strong> (someone had to run it)</li>
+            <li><strong>Central points of failure</strong> (someone could shut it down)</li>
+            <li><strong>Trust requirements</strong> (someone could censor or inflate)</li>
+          </ul>
+        </div>
+        <div class="callout">
+          <h3>What was needed?</h3>
+          <ul>
+            <li><strong>Public verification</strong> anyone can audit</li>
+            <li><strong>Scarcity</strong> enforced by math + incentives</li>
+            <li><strong>Consensus</strong> without permission</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+      <h2>2) 2008: Satoshi Nakamoto publishes the whitepaper</h2>
+      <p class="muted">
+        In October 2008, someone using the name <strong>Satoshi Nakamoto</strong> published a paper titled
+        “Bitcoin: A Peer-to-Peer Electronic Cash System.” It described a way to combine cryptography and
+        Proof-of-Work to create a ledger that anyone can verify.
+      </p>
+
+      <div class="kvs">
+        <div class="k">Key idea</div>
+        <div class="v">A public ledger (blockchain) secured by Proof-of-Work, where consensus is driven by economic incentives.</div>
+
+        <div class="k">What it solved</div>
+        <div class="v">Double-spending without a central operator.</div>
+
+        <div class="k">Why it mattered</div>
+        <div class="v">It made digital scarcity real — and enforceable — in an open network.</div>
+      </div>
+
+      <div class="btnrow">
+        <a class="btn" href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="noreferrer">Read the Whitepaper</a> | 
+        <a class="btn" href="https://satoshi.nakamotoinstitute.org/" target="_blank" rel="noreferrer">Satoshi Archive</a>
+      </div>
+
+      <p class="note">Tip: In Satoshium language, this is the moment “truth became inspectable.”</p>
+    </div>
+
+    <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+      <h2>3) 2009: The Genesis Block</h2>
+      <p class="muted">
+        In January 2009, Satoshi mined the first block — the <strong>Genesis Block</strong> — and launched the network.
+        This wasn’t just a technical start; it was a declaration: Bitcoin would be built in public and verified by anyone.
+      </p>
+
+      <div class="callout">
+        <h3>The message inside the Genesis Block</h3>
+        <p class="muted" style="margin:0 0 6px;">
+          The Genesis Block contains a famous timestamp headline:
+        </p>
+        <div class="quote">
+          “The Times 03/Jan/2009 Chancellor on brink of second bailout for banks”
+        </div>
+        <p class="note" style="margin-top:10px;">
+          Many interpret this as a commentary on monetary bailouts and the need for a system not controlled by political incentives.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+      <h2>4) Early growth: from experiment to network</h2>
+      <p class="muted">
+        Bitcoin began as a small experiment among cryptographers and builders. Over time, it gained users, miners,
+        exchanges, wallets, and — most importantly — a global community that maintained the rules.
+      </p>
+
+      <ul>
+        <li><strong>Peers → nodes:</strong> people ran software to validate the rules.</li>
+        <li><strong>Mining → security:</strong> Proof-of-Work anchored blocks in the real world (energy + hardware).</li>
+        <li><strong>Markets → liquidity:</strong> price discovery made Bitcoin harder to ignore.</li>
+        <li><strong>Culture → resilience:</strong> the social layer defended decentralization.</li>
+      </ul>
+
+      <p class="note">Bitcoin isn’t a company. It’s a protocol + a set of rules that people choose to run.</p>
+    </div>
+
+    <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+      <h2>5) Why origins matter for Satoshium</h2>
+      <p class="muted">
+        Satoshium is built on a simple belief: if Bitcoin can produce <strong>incorruptible money</strong>,
+        then Bitcoin-era systems can produce <strong>incorruptible intelligence</strong> — agents and tools that are auditable,
+        rule-bound, and resistant to manipulation.
+      </p>
+
+      <div class="callout">
+        <h3>Carry-forward principles</h3>
+        <ul>
+          <li><strong>Open verification:</strong> trust is earned through inspection.</li>
+          <li><strong>Decentralization:</strong> avoid single points of control.</li>
+          <li><strong>Incentives matter:</strong> systems must align behavior with rules.</li>
+          <li><strong>Public progress:</strong> build in the open, ship what works.</li>
+        </ul>
+      </div>
+
+      <div class="btnrow">
+        <a class="btn" href="https://satoshium.info/education/bitcoin/">Back to Bitcoin</a>
+      </div>
+    </div>
+
+               <!-- Footer mission statement + links -->
+</main>                     
+<div class="wrap reflection">
+<hr />
+<div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
+  Satoshium is being built slowly, in public, and with architectural discipline.
+</div>
+<hr />
+
+<div id="footer-container"></div>
+
+<script src="https://satoshium.link/assets/sayings.js"></script>
+<script>
+fetch("https://satoshium.link/components/footer.html")
+ .then(response => response.text())
+ .then(data => {
+ document.getElementById("footer-container").innerHTML = data;
+ });
+</script>
+</body>
+</html>
