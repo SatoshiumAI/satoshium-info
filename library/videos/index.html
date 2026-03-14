@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Satoshium Video Library — Cinematic Archive</title>
+
+  <style>
+    :root{
+      --card-wm: url('https://satoshium.link/assets/seal.png');
+      --bg:#07090d;
+      --panel:#0c1018;
+      --text:#e8edf7;
+      --muted:#9aa7bd;
+      --gold:#d6a34a;
+      --gold2:#f4c36a;
+      --line:rgba(214,163,74,.18);
+    }
+
+    *{box-sizing:border-box}
+
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      line-height:1.55;
+    }
+
+    body{
+      padding-top:80px;
+    }
+
+    a{
+      color:var(--gold2);
+      text-decoration:none;
+    }
+
+    a:hover{
+      color:var(--gold);
+    }
+
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:0 18px;
+    }
+
+    .content{
+      padding:34px 18px 60px;
+    }
+
+    .reflection{
+      margin-top:40px;
+      margin-bottom:40px;
+      color:var(--muted);
+    }
+
+    h1,h2{
+      margin:0 0 10px;
+    }
+
+    h1{
+      font-size:30px;
+      color:var(--gold2);
+    }
+
+    h2{
+      font-size:20px;
+      color:var(--gold2);
+      margin:0;
+    }
+
+    .muted{
+      color:var(--muted);
+    }
+
+    hr{
+      border:none;
+      border-top:1px solid var(--line);
+      margin:22px 0;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(214,163,74,.08);
+      color:var(--gold2);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .card{
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(to bottom right, rgba(12,16,24,.94), rgba(12,16,24,.88));
+      border:1px solid rgba(214,163,74,.15);
+      border-radius:16px;
+      padding:16px;
+      margin:16px 0;
+      box-shadow:0 0 0 1px rgba(214,163,74,.08), 0 20px 50px rgba(0,0,0,.45);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 25px rgba(0,0,0,.35);
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:-60px;
+      background-image:var(--card-wm);
+      background-repeat:no-repeat;
+      background-size:min(720px, 70vw);
+      background-position:right -140px center;
+      opacity:0.028;
+      filter:blur(1px);
+      pointer-events:none;
+      z-index:0;
+    }
+
+    .card > *{
+      position:relative;
+      z-index:1;
+    }
+
+    .cardhead{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:8px;
+    }
+
+    .kicker{
+      font-size:12px;
+      letter-spacing:.14em;
+      font-weight:800;
+      color:var(--muted);
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(214,163,74,.06);
+      font-size:12px;
+      font-weight:800;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    .badge.live{
+      color:#cfead7;
+    }
+
+    .btnrow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(214,163,74,.06);
+      color:var(--gold2);
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .btn:hover{
+      background:rgba(214,163,74,.10);
+    }
+
+    .pagefoot{
+      margin-top:22px;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .library-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+      margin-top:12px;
+    }
+
+    .library-links a{
+      font-weight:700;
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <div id="topbar-slot"></div>
+  <script src="https://satoshium.link/components/topbar-loader.js"></script>
+
+  <main class="wrap content">
+    <div class="pill">🎞️ Video Library</div>
+
+    <h1 style="margin-top:12px;">Cinematic Archive</h1>
+
+    <p class="muted">
+      Stories of a quieter future.<br>
+      Built in public. Preserved in time.
+    </p>
+
+    <section class="card" style="--card-wm:url('https://satoshium.link/assets/seal.png');">
+      <div class="cardhead">
+        <div>
+          <div class="kicker">LIBRARY OVERVIEW</div>
+          <h2 style="margin-top:6px;">Satoshium Film Archive</h2>
+        </div>
+        <span class="badge live">📚 PUBLIC VIDEO LAYER</span>
+      </div>
+
+      <p class="muted" style="margin:0;">
+        This section houses the cinematic and video-based archive of the Satoshium platform.
+        Featured hero videos may appear elsewhere across the ecosystem, but this page serves as the growing long-term home for public film entries and visual releases.
+      </p>
+
+      <div class="library-links">
+        <a href="https://satoshium.info/library/">Library Home</a>
+        <a href="https://satoshium.info/library/videos/">Videos</a>
+      </div>
+    </section>
+
+    <section class="card" aria-label="Film 001" style="--card-wm:url('https://satoshium.link/assets/seal.png');">
+      <div class="cardhead">
+        <div>
+          <div class="kicker">FILM 001</div>
+          <h2 style="margin-top:6px;">The Quiet Future Is Being Built</h2>
+        </div>
+        <span class="badge live">✅ AVAILABLE</span>
+      </div>
+
+      <p class="muted" style="margin:0;">
+        A cinematic introduction to the Satoshium vision — Bitcoin-governed intelligence, built deliberately and in public.
+      </p>
+
+      <div class="btnrow">
+        <a class="btn" href="./film-001.html">Enter Film 001</a>
+      </div>
+    </section>
+
+    <section class="card" aria-label="Film 002" style="--card-wm:url('https://satoshium.link/assets/seal.png');">
+      <div class="cardhead">
+        <div>
+          <div class="kicker">FILM 002</div>
+          <h2 style="margin-top:6px;">In Development</h2>
+        </div>
+        <span class="badge">⏳ COMING NEXT</span>
+      </div>
+
+      <p class="muted" style="margin:0;">
+        The next chapter is underway. Release occurs when the narrative and platform are ready.
+      </p>
+    </section>
+
+    <div class="pagefoot">Satoshium Video Archive • Ongoing public series</div>
+
+    <div class="wrap reflection">
+      <hr />
+      <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
+        Satoshium is being built slowly, in public, and with architectural discipline.
+      </div>
+      <hr />
+
+      <div id="footer-container"></div>
+    </div>
+  </main>
+
+  <script src="https://satoshium.link/assets/sayings.js"></script>
+  <script>
+    fetch("https://satoshium.link/components/footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-container").innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
