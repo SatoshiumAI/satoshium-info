@@ -51,6 +51,7 @@ Satoshium architecture follows several conceptual layers.
 | Layer | Purpose |
 |------|------|
 | **Trust Layer** | Verification, safety, and governance logic |
+| **Signal Layer** | Coordination, routing, announcements, and system messaging |
 | **Knowledge Layer** | Documentation, terminology, and structured memory |
 | **Intelligence Layer** | Agents and reasoning systems |
 | **Simulation Layer** | Experimental modeling environments |
