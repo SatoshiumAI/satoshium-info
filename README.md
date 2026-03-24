@@ -1,25 +1,27 @@
 # 🪐 Satoshium — Info
 
-Satoshium Info is the documentation, architecture, and development intelligence surface of the Satoshium ecosystem. It exists to make the project understandable, navigable, and durable — not just for today’s build cycle, but for the long arc of what Satoshium could become by 2035 and beyond.
+Satoshium Info is the **Knowledge Layer** of the Satoshium ecosystem.
 
-This repository is part of the **Satoshium platform**, an experimental system exploring how decentralized intelligence, AI agents, and cryptographic infrastructure can evolve together over long time horizons.
+It serves as the documentation, architecture, and development intelligence surface of the platform — preserving structure, vocabulary, and long-horizon system memory as the ecosystem evolves.
+
+If **satoshium.ai** is the public interface of Satoshium, then **satoshium.info** is where the architecture remains visible and understandable over time.
 
 ---
 
 # 🌐 The Satoshium Universe
 
-Satoshium is expanding into a **layered domain ecosystem** where each domain serves a distinct role.
+Satoshium is organized as a layered domain ecosystem where each domain has a distinct role.
 
 | Domain | Role |
 |------|------|
 | **satoshium.ai** | Public platform layer |
-| **satoshium.info** | Knowledge & engineering layer |
+| **satoshium.info** | Knowledge layer and documentation hub |
 | **satoshium.xyz** | Experimental frontier |
 | **satoshium.net** | Infrastructure & network layer |
+| **satoshium.dev** | Developer ecosystem layer |
+| **satoshium.link** | Coordination & routing layer |
 | **satoshium.store** | Cultural & merchandise layer |
-| **satoshium.link** | Gateway & shared components |
-| **satoshium.dev** | Developer ecosystem (planned) |
-| **satoshium.us** | Jurisdictional / operational layer (planned) |
+| **satoshium.us** | Jurisdictional / operational layer (future) |
 
 Together these domains form the **Satoshium Universe**.
 
@@ -27,84 +29,100 @@ Together these domains form the **Satoshium Universe**.
 
 # 🧭 Role of This Repository
 
-This repository supports the **[layer / system]** of the Satoshium platform.
+This repository supports the **Knowledge Layer** of the Satoshium platform.
 
-Its responsibilities may include:
+Its responsibilities include:
 
-- [primary responsibility]
-- [secondary responsibility]
-- [supporting systems]
-- [documentation / infrastructure / experimentation]
+- maintaining architectural documentation
+- preserving system vocabulary and terminology
+- supporting ecosystem mapping and structure visibility
+- organizing workspace development surfaces
+- hosting education and reference materials
+- maintaining long-horizon system memory
 
-Each repository exists to support **structured growth of the ecosystem**, not isolated projects.
+This repository exists to support **coherent ecosystem growth**, not isolated software components.
 
 ---
 
 # 🧠 Platform Layers
 
-Satoshium architecture generally follows several conceptual layers.
+Satoshium architecture follows several conceptual layers.
 
 | Layer | Purpose |
 |------|------|
 | **Trust Layer** | Verification, safety, and governance logic |
-| **Knowledge Layer** | Documentation, terminology, and structured knowledge |
-| **Intelligence Layer** | Agents, reasoning systems, and coordination |
+| **Knowledge Layer** | Documentation, terminology, and structured memory |
+| **Intelligence Layer** | Agents and reasoning systems |
 | **Simulation Layer** | Experimental modeling environments |
-| **Interface Layer** | Public platform and application surfaces |
+| **Interface Layer** | Public platform surfaces |
 
-This repository primarily contributes to the:
+This repository contributes primarily to the:
 
-**➡ [Insert layer here]**
+➡ **Knowledge Layer**
+
+---
+
+# 📚 Knowledge Layer Structure
+
+The Satoshium Info domain is expected to support several long-term documentation surfaces:
+
+- Education (conceptual explanations)
+- Library (essays, references, whitepapers)
+- Workspace (active engineering structure)
+- Architecture maps
+- Repository indexing
+- terminology systems
+- ecosystem timelines
+- contributor orientation material
+
+Together these form the **memory layer of Satoshium**.
 
 ---
 
 # ⚙ Shared Platform Components
 
-Many Satoshium domains use shared components hosted through:
+Many Satoshium domains use shared UI infrastructure hosted via:
 
 https://satoshium.link
 
-Shared UI infrastructure may include:
+Shared components may include:
 
-/components/topbar.html
-/components/footer.html
-/components/domain-layers.html
+/components/topbar.html  
+/components/footer.html  
+/components/domain-layers.html  
 
-
-These components help maintain consistent navigation and architecture visibility across the Satoshium ecosystem.
+These ensure architectural consistency across domains.
 
 ---
 
 # 🧩 Relationship to Other Repositories
 
-This repository interacts with several other Satoshium repositories.
+This repository connects closely with:
 
-Examples may include:
-
-- **satoshium-core** — shared platform logic
 - **satoshium-specs** — architecture definitions
-- **satoshium-progress** — public build documentation
-- **satoshium-simulations** — experimental modeling environments
+- **satoshium-registry** — system indexing
+- **satoshium-progress** — public build timeline
 - **satoshium-demos** — prototype demonstrations
-- **satoshium-registry** — system indexing and structure
+- **satoshium-simulations** — modeling environments
+- **satoshium-core** — shared platform logic (future expansion)
 
-Repositories within the ecosystem function as **coordinated modules rather than isolated projects**.
+Repositories function as coordinated modules inside a layered system architecture.
 
 ---
 
 # 🚧 Development Status
 
-Satoshium repositories are under **active long-horizon development**.
+This repository is part of the **Phase004 knowledge-layer rollout** of the Satoshium ecosystem.
 
-Some repositories may contain:
+It currently supports:
 
-- working systems
-- experimental prototypes
-- early architectural structures
-- documentation in progress
-- conceptual groundwork
+- documentation structure
+- architectural mapping
+- terminology development
+- workspace coordination
+- ecosystem indexing foundations
 
-Tools and modules may evolve significantly over time.
+Additional knowledge-layer systems will expand over time.
 
 ---
 
@@ -112,22 +130,23 @@ Tools and modules may evolve significantly over time.
 
 Satoshium is being built:
 
-- slowly  
-- transparently  
-- with architectural discipline  
+- slowly
+- transparently
+- with architectural discipline
 
-The goal is not rapid hype-driven development, but **durable systems thinking over decades**.
+The objective is long-horizon system coherence rather than short-term feature velocity.
 
 ---
 
 # 🔗 Explore the Ecosystem
 
-- https://satoshium.ai  
-- https://satoshium.info  
-- https://satoshium.xyz  
-- https://satoshium.net  
-- https://satoshium.store  
-- https://satoshium.link  
+https://satoshium.ai  
+https://satoshium.info  
+https://satoshium.xyz  
+https://satoshium.net  
+https://satoshium.dev  
+https://satoshium.store  
+https://satoshium.link  
 
 ---
 
@@ -139,13 +158,11 @@ Satoshium explores how decentralized intelligence systems can be built using:
 
 - cryptographic rules
 - transparent architecture
+- verifiable structure
 - open documentation
 - long-horizon design
 
 ---
 
 © Satoshium  
-Experimental platform under active development.
-
-<img width="647" height="2743" alt="image" src="https://github.com/user-attachments/assets/16dd6ed3-d892-4f52-95fe-1856f62fe06e" />
-minutes**.
+Knowledge Layer repository — Phase004
