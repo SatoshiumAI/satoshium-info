@@ -7,7 +7,25 @@
   <link rel="alternate icon" href="/assets/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <meta name="theme-color" content="#4da3ff">
-  <title>Satoshium • Bitcoin vs Fiat</title>
+  <title>Bitcoin vs Fiat | Satoshium</title>
+  <meta name="description" content="Bitcoin vs Fiat compares government-issued currency with decentralized digital money — covering supply, trust, settlement, portability, and long-term incentives.">
+  <link rel="canonical" href="https://satoshium.info/education/bitcoin/bitcoin-vs-fiat.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bitcoin vs Fiat | Satoshium">
+  <meta property="og:description" content="Bitcoin vs Fiat compares government-issued currency with decentralized digital money — covering supply, trust, settlement, portability, and long-term incentives.">
+  <meta property="og:url" content="https://satoshium.info/education/bitcoin/bitcoin-vs-fiat.html">
+  <meta property="og:image" content="https://satoshium.link/assets/btc-seal.png">
+  <meta property="og:site_name" content="Satoshium">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bitcoin vs Fiat | Satoshium">
+  <meta name="twitter:description" content="Bitcoin vs Fiat compares government-issued currency with decentralized digital money — covering supply, trust, settlement, portability, and long-term incentives.">
+  <meta name="twitter:image" content="https://satoshium.link/assets/btc-seal.png">
+  <meta name="twitter:site" content="@SatoshiumAI">
 
 <style>
 
@@ -46,6 +64,7 @@ body{
 
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -105,7 +124,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -114,6 +133,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -134,17 +155,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -176,33 +190,99 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* ===== Callout ===== */
+
+.callout{
+border:1px solid var(--line);
+border-radius:10px;
+padding:12px 14px;
+background:rgba(214,163,74,.04);
+}
+
+.k{
+font-size:13px;
+font-weight:700;
+color:var(--gold2);
+}
+
 /* ===== Table ===== */
 
-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 16px;
+.tablewrap{
+overflow-x:auto;
+-webkit-overflow-scrolling:touch;
 }
 
-td, th {
-  padding: 10px 16px;
-}
-  
-table.compare-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 16px;
+table{
+width:100%;
+border-collapse:separate;
+border-spacing:0 16px;
 }
 
-.compare-table tr {
-  background: rgba(214,163,74,.03);
+td,th{
+padding:12px 16px;
+text-align:left;
+vertical-align:top;
 }
 
-.compare-table td,
-.compare-table th {
-  padding: 12px 16px;
+th{
+color:var(--gold2);
+font-size:13px;
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:.04em;
+border-bottom:1px solid var(--line);
 }
-  
+
+tr{
+background:rgba(214,163,74,.03);
+}
+
+/* ===== Status chips (table) ===== */
+
+.chip{
+display:inline-block;
+padding:2px 8px;
+border-radius:999px;
+font-size:10px;
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:.04em;
+margin-top:4px;
+}
+.chip.ok{
+background:rgba(74,214,120,.12);
+color:#5fd88a;
+border:1px solid rgba(74,214,120,.25);
+}
+.chip.warn{
+background:rgba(214,163,74,.12);
+color:var(--gold2);
+border:1px solid rgba(214,163,74,.25);
+}
+.chip.bad{
+background:rgba(214,74,74,.12);
+color:#e07070;
+border:1px solid rgba(214,74,74,.25);
+}
+
+/* ===== Grid ===== */
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+@media(max-width:760px){
+.grid{grid-template-columns:1fr}
+}
+
+/* ===== Reduced motion ===== */
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+ .card{transition:none}
+}
+
 </style>
 </head>
 
@@ -210,7 +290,7 @@ table.compare-table {
 
 <div id="topbar-slot" data-topbar="platform"></div>
 <script src="/components/topbar-loader.js"></script>
- 
+
   <main class="wrap content">
     <div class="pill">🟠 Bitcoin 101</div>
 
@@ -230,7 +310,7 @@ table.compare-table {
       </div>
     </div>
 
-    <div class="card card--wm" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+    <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <h2 style="margin-top:0;">Quick Comparison</h2>
       <div class="tablewrap" style="margin-top:10px;">
         <table>
@@ -267,11 +347,11 @@ table.compare-table {
              <tr>
               <td><strong>Trust</strong></td>
               <td>
-                “Trust the issuer” (banks, governments, intermediaries).<br>
+                "Trust the issuer" (banks, governments, intermediaries).<br>
                 <span class="chip warn">Trust-based</span>
               </td>
               <td>
-                “Verify the rules” (open protocol, predictable issuance).<br>
+                "Verify the rules" (open protocol, predictable issuance).<br>
                 <span class="chip ok">Verification-based</span>
               </td>
             </tr>
@@ -339,11 +419,11 @@ table.compare-table {
     </div>
 
     <div class="grid">
-      <div class="card card--wm" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+      <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
         <h2 style="margin-top:0;">What Fiat Does Well</h2>
         <ul>
           <li><strong>Easy to use</strong> (everyone accepts it locally)</li>
-          <li><strong>Stable day-to-day</strong> (prices don’t swing hourly)</li>
+          <li><strong>Stable day-to-day</strong> (prices don't swing hourly)</li>
           <li><strong>Consumer protections</strong> (chargebacks, fraud departments)</li>
           <li><strong>Credit system</strong> (loans, mortgages, business lines)</li>
         </ul>
@@ -352,7 +432,7 @@ table.compare-table {
         </p>
       </div>
 
-      <div class="card card--wm" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+      <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
         <h2 style="margin-top:0;">What Bitcoin Does Differently</h2>
         <ul>
           <li><strong>Fixed supply</strong> (no surprise dilution)</li>
@@ -366,10 +446,10 @@ table.compare-table {
       </div>
     </div>
 
-    <div class="card card--wm" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+    <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <h2 style="margin-top:0;">Why This Matters (Real Life)</h2>
       <ul>
-        <li><strong>Savings:</strong> Fiat can lose purchasing power. Bitcoin’s supply is fixed — but price can be volatile.</li>
+        <li><strong>Savings:</strong> Fiat can lose purchasing power. Bitcoin's supply is fixed — but price can be volatile.</li>
         <li><strong>Access:</strong> Banking is permissioned. Bitcoin is open to anyone with keys.</li>
         <li><strong>Ownership:</strong> Bank balances are claims on a system. Bitcoin can be held in self-custody.</li>
         <li><strong>Portability:</strong> Bitcoin can cross borders faster than legacy rails (especially with Lightning).</li>
@@ -380,17 +460,17 @@ table.compare-table {
       </p>
     </div>
 
-    <div class="card card--wm" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+    <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <h2 style="margin-top:0;">Common Misconceptions</h2>
       <ul>
-        <li><strong>“Bitcoin is anonymous.”</strong> It’s better described as <em>pseudonymous</em>. The ledger is public.</li>
-        <li><strong>“Bitcoin is backed by nothing.”</strong> It’s backed by verifiable rules, security, and a global network.</li>
-        <li><strong>“Fiat is always safer.”</strong> Fiat is safer for chargebacks; bitcoin is safer for censorship-resistance (if used correctly).</li>
-        <li><strong>“Bitcoin is only for investing.”</strong> It’s also a payment rail and settlement network (Lightning expands this).</li>
+        <li><strong>"Bitcoin is anonymous."</strong> It's better described as <em>pseudonymous</em>. The ledger is public.</li>
+        <li><strong>"Bitcoin is backed by nothing."</strong> It's backed by verifiable rules, security, and a global network.</li>
+        <li><strong>"Fiat is always safer."</strong> Fiat is safer for chargebacks; bitcoin is safer for censorship-resistance (if used correctly).</li>
+        <li><strong>"Bitcoin is only for investing."</strong> It's also a payment rail and settlement network (Lightning expands this).</li>
       </ul>
     </div>
 
-    <div class="card card--wm" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+    <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <h2 style="margin-top:0;">Next Steps</h2>
       <ul>
         <li><a href="https://satoshium.info/education/bitcoin/">Back to Bitcoin</a></li>
@@ -401,8 +481,7 @@ table.compare-table {
       </p>
     </div>
 
-                <!-- Footer mission statement + links -->
-</main>                     
+</main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -411,6 +490,7 @@ table.compare-table {
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
