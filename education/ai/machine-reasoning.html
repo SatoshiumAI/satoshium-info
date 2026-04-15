@@ -7,7 +7,28 @@
 <link rel="alternate icon" href="/assets/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
-<title>Machine Reasoning — What It Is</title>
+<title>Machine Reasoning — What It Is | Satoshium Knowledge Layer</title>
+<!-- TIER 3 — SEO: added meta description (was missing) -->
+<meta name="description" content="Machine reasoning explained — how software uses rules, logic, context, and structured information to evaluate problems and reach disciplined conclusions. Covers reasoning for AI agents, guardrails, and trustworthy intelligence within the Satoshium framework." />
+
+<!-- TIER 3 — SEO: Open Graph metadata -->
+<meta property="og:title" content="Machine Reasoning — What It Is | Satoshium Knowledge Layer" />
+<meta property="og:description" content="Machine reasoning explained — how software uses rules, logic, context, and structured information to evaluate problems and reach disciplined conclusions. Covers reasoning for AI agents, guardrails, and trustworthy intelligence within the Satoshium framework." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://satoshium.info/education/ai/machine-reasoning.html" />
+<meta property="og:image" content="https://satoshium.link/assets/opengraph.jpg" />
+<meta property="og:site_name" content="Satoshium" />
+<meta property="og:locale" content="en_US" />
+
+<!-- TIER 3 — SEO: Twitter Card metadata -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Machine Reasoning — What It Is | Satoshium Knowledge Layer" />
+<meta name="twitter:description" content="Machine reasoning explained — how software uses rules, logic, context, and structured information to evaluate problems and reach disciplined conclusions. Covers reasoning for AI agents, guardrails, and trustworthy intelligence within the Satoshium framework." />
+<meta name="twitter:image" content="https://satoshium.link/assets/opengraph.jpg" />
+<meta name="twitter:site" content="@SatoshiumAI" />
+
+<!-- TIER 3 — SEO: canonical URL -->
+<link rel="canonical" href="https://satoshium.info/education/ai/machine-reasoning.html" />
 
 <style>
 
@@ -40,7 +61,6 @@ body.theme-ai{
  --card-wm: url('https://satoshium.link/assets/ai-seal.jpg');
 }
 
-
 *{box-sizing:border-box}
 
 html,body{
@@ -59,9 +79,15 @@ body{
  margin-bottom:40px;
  color:var(--muted);
 }
- 
+
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+
+/* TIER 3 — ACCESSIBILITY: visible focus ring for keyboard navigation */
+a:focus-visible{
+ outline:2px solid var(--gold2);
+ outline-offset:2px;
+}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -111,6 +137,7 @@ margin:22px 0
 
 /* ===== Cards ===== */
 
+/* TIER 3 — CSS: consolidated 3 duplicate .card blocks into one */
 .card{
 position: relative;
 overflow: hidden;
@@ -121,7 +148,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -130,6 +157,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -150,17 +179,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -186,6 +208,18 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* TIER 3 — ACCESSIBILITY: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce){
+ .wrap.content{
+  animation:none;
+  opacity:1;
+  transform:none;
+ }
+ .card{
+  transition:none;
+ }
+}
+
 </style>
 </head>
 
@@ -196,7 +230,7 @@ margin:8px 0 0 18px
 
 <main class="wrap content">
 
-<div class="pill">🧩 What is machine reasoning?</div>
+<div class="pill">&#x1F9E9; What is machine reasoning?</div>
 
 <h1 style="margin-top:12px;">Machine reasoning, explained</h1>
 
@@ -208,7 +242,7 @@ It is one of the key capabilities that makes advanced AI systems useful for comp
 
 <div class="card">
 
-<h2 style="margin-top:0;">🔎 The simple definition</h2>
+<h2 style="margin-top:0;">&#x1F50E; The simple definition</h2>
 
 <p>
 <b>Machine reasoning is when software uses rules, logic, context, and structured information to evaluate a problem and arrive at an answer or decision.</b>
@@ -223,20 +257,20 @@ and move through a problem in a more disciplined way.
 
 <div class="card">
 
-<h2 style="margin-top:0;">🧠 What machine reasoning looks like</h2>
+<h2 style="margin-top:0;">&#x1F9E0; What machine reasoning looks like</h2>
 
 <ul>
-<li><b>Following steps</b> — moving through a problem in order</li>
-<li><b>Comparing evidence</b> — weighing different facts or signals</li>
-<li><b>Applying rules</b> — using known constraints or policies</li>
-<li><b>Choosing actions</b> — selecting the best next step based on context</li>
+<li><b>Following steps</b> &#x2014; moving through a problem in order</li>
+<li><b>Comparing evidence</b> &#x2014; weighing different facts or signals</li>
+<li><b>Applying rules</b> &#x2014; using known constraints or policies</li>
+<li><b>Choosing actions</b> &#x2014; selecting the best next step based on context</li>
 </ul>
 
 </div>
 
 <div class="card">
 
-<h2 style="margin-top:0;">⚙️ How it differs from basic prediction</h2>
+<h2 style="margin-top:0;">&#x2699;&#xFE0F; How it differs from basic prediction</h2>
 
 <p>
 Many AI systems are very good at prediction: they estimate the next likely word,
@@ -244,8 +278,8 @@ image, or action. Reasoning goes further.
 </p>
 
 <ul>
-<li><b>Prediction</b> — what is likely?</li>
-<li><b>Reasoning</b> — what follows from the rules, context, and evidence?</li>
+<li><b>Prediction</b> &#x2014; what is likely?</li>
+<li><b>Reasoning</b> &#x2014; what follows from the rules, context, and evidence?</li>
 </ul>
 
 <p class="muted" style="margin-top:10px;">
@@ -256,11 +290,11 @@ Strong systems often use both: prediction for speed, reasoning for discipline.
 
 <div class="card">
 
-<h2 style="margin-top:0;">🧱 Why reasoning matters for agents</h2>
+<h2 style="margin-top:0;">&#x1F9F1; Why reasoning matters for agents</h2>
 
 <p>
 AI agents do more than answer questions. They plan, decide, and act.
-That means they need more than pattern recognition — they need reasoning.
+That means they need more than pattern recognition &#x2014; they need reasoning.
 </p>
 
 <ul>
@@ -274,7 +308,7 @@ That means they need more than pattern recognition — they need reasoning.
 
 <div class="card">
 
-<h2 style="margin-top:0;">⚠️ Why reasoning still needs guardrails</h2>
+<h2 style="margin-top:0;">&#x26A0;&#xFE0F; Why reasoning still needs guardrails</h2>
 
 <p>
 Reasoning systems can still fail if their inputs are wrong, their rules are weak,
@@ -292,7 +326,7 @@ or their goals are poorly defined.
 
 <div class="card">
 
-<h2 style="margin-top:0;">🧭 Why Satoshium cares about machine reasoning</h2>
+<h2 style="margin-top:0;">&#x1F9ED; Why Satoshium cares about machine reasoning</h2>
 
 <p>
 Satoshium is not interested in intelligence alone. It is interested in
@@ -310,7 +344,7 @@ The goal is to make machine reasoning more transparent, auditable, and aligned w
 
 </div>
 
-</main>                     
+</main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -319,6 +353,7 @@ The goal is to make machine reasoning more transparent, auditable, and aligned w
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
@@ -330,4 +365,3 @@ fetch("https://satoshium.link/components/footer.html")
 </script>
 </body>
 </html>
-
