@@ -7,8 +7,25 @@
 <link rel="alternate icon" href="/assets/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
-<title>Hashrate & Difficulty • Satoshium</title>
-<meta name="description" content="Hashrate and difficulty are Bitcoin’s self-adjusting security heartbeat. Learn what they mean, how they work, and why they matter.">
+<title>Hashrate & Difficulty | Satoshium</title>
+<meta name="description" content="Hashrate and difficulty are Bitcoin's self-adjusting security heartbeat. Learn what they mean, how they work, and why they matter.">
+<link rel="canonical" href="https://satoshium.info/education/bitcoin/hashrate-difficulty.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hashrate & Difficulty | Satoshium">
+<meta property="og:description" content="Hashrate and difficulty are Bitcoin's self-adjusting security heartbeat. Learn what they mean, how they work, and why they matter.">
+<meta property="og:url" content="https://satoshium.info/education/bitcoin/hashrate-difficulty.html">
+<meta property="og:image" content="https://satoshium.link/assets/btc-seal.png">
+<meta property="og:site_name" content="Satoshium">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hashrate & Difficulty | Satoshium">
+<meta name="twitter:description" content="Hashrate and difficulty are Bitcoin's self-adjusting security heartbeat. Learn what they mean, how they work, and why they matter.">
+<meta name="twitter:image" content="https://satoshium.link/assets/btc-seal.png">
+<meta name="twitter:site" content="@SatoshiumAI">
 
 <style>
 
@@ -47,6 +64,7 @@ body{
 
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -106,7 +124,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -115,6 +133,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -135,17 +155,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -177,6 +190,39 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* ===== Rich markup ===== */
+
+.small{font-size:14px;line-height:1.6}
+
+.kicker{
+font-size:11px;
+text-transform:uppercase;
+letter-spacing:.08em;
+color:var(--muted);
+margin-bottom:2px;
+}
+
+.toc{
+padding-left:20px;
+margin:10px 0 0;
+}
+.toc li{margin-bottom:6px}
+
+.quote{
+border-left:3px solid var(--gold);
+padding:8px 12px;
+margin:14px 0 0;
+color:var(--muted);
+font-style:italic;
+}
+
+/* ===== Reduced motion ===== */
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+ .card{transition:none}
+}
+
 </style>
 </head>
 
@@ -191,7 +237,7 @@ margin:8px 0 0 18px
   <h1>Hashrate & difficulty</h1>
 
   <p class="small">
-    Hashrate and difficulty are Bitcoin’s self-adjusting security heartbeat. They show how much work is protecting the network — and how Bitcoin automatically adapts so blocks keep arriving on schedule.
+    Hashrate and difficulty are Bitcoin's self-adjusting security heartbeat. They show how much work is protecting the network — and how Bitcoin automatically adapts so blocks keep arriving on schedule.
   </p>
 
   <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
@@ -210,7 +256,7 @@ margin:8px 0 0 18px
     </ol>
 
     <div class="quote small">
-      Satoshium principle: Bitcoin doesn’t ask permission to stay stable — it self-corrects.
+      Satoshium principle: Bitcoin doesn't ask permission to stay stable — it self-corrects.
     </div>
   </div>
 
@@ -219,14 +265,14 @@ margin:8px 0 0 18px
     <h2>The simple explanation</h2>
     <p class="small">
       Bitcoin produces blocks about every ~10 minutes. Mining hardware around the world competes to find the next valid block.
-      Two metrics describe what’s happening:
+      Two metrics describe what's happening:
     </p>
     <ul class="small">
       <li><strong>Hashrate</strong> = total mining power actively securing Bitcoin</li>
       <li><strong>Difficulty</strong> = how hard it is (right now) to find the next block</li>
     </ul>
     <div class="quote small">
-      Hashrate is “how much work is showing up.” Difficulty is “how hard the test is.”
+      Hashrate is "how much work is showing up." Difficulty is "how hard the test is."
     </div>
   </section>
 
@@ -234,7 +280,7 @@ margin:8px 0 0 18px
     <div class="kicker">2) Network strength</div>
     <h2>What hashrate measures</h2>
     <p class="small">
-      Hashrate is the combined rate of “hash attempts” miners are making worldwide. More hashrate means more real-world
+      Hashrate is the combined rate of "hash attempts" miners are making worldwide. More hashrate means more real-world
       cost is being spent to secure Bitcoin.
     </p>
     <ul class="small">
@@ -248,11 +294,11 @@ margin:8px 0 0 18px
     <div class="kicker">3) Stability control</div>
     <h2>What difficulty controls</h2>
     <p class="small">
-      Difficulty is the protocol’s way of keeping block timing stable. If miners get faster (more hashrate),
+      Difficulty is the protocol's way of keeping block timing stable. If miners get faster (more hashrate),
       difficulty rises. If miners disappear, difficulty falls.
     </p>
     <div class="quote small">
-      Difficulty is not “good” or “bad.” It’s a steering wheel that keeps the system on schedule.
+      Difficulty is not "good" or "bad." It's a steering wheel that keeps the system on schedule.
     </div>
   </section>
 
@@ -277,7 +323,7 @@ margin:8px 0 0 18px
     <h2>Why this increases security</h2>
     <p class="small">
       The more hashrate securing Bitcoin, the more expensive it becomes to attack. Difficulty ensures that even as hashrate
-      changes, Bitcoin’s issuance schedule and block rhythm remain predictable.
+      changes, Bitcoin's issuance schedule and block rhythm remain predictable.
     </p>
     <ul class="small">
       <li>Hashrate raises the cost of rewriting history</li>
@@ -290,8 +336,8 @@ margin:8px 0 0 18px
     <div class="kicker">6) Reading the dashboard</div>
     <h2>What these metrics signal</h2>
     <p class="small">
-      People watch hashrate and difficulty because they reveal network “fitness.”
-      They don’t predict price directly, but they can show whether the network is expanding, adapting, or under temporary stress.
+      People watch hashrate and difficulty because they reveal network "fitness."
+      They don't predict price directly, but they can show whether the network is expanding, adapting, or under temporary stress.
     </p>
     <ul class="small">
       <li><strong>Rising hashrate</strong> often signals long-term confidence and investment</li>
@@ -304,19 +350,19 @@ margin:8px 0 0 18px
     <div class="kicker">7) Common misunderstandings</div>
     <h2>Common misunderstandings</h2>
 
-    <p class="small"><strong>“If hashrate drops, Bitcoin is broken.”</strong><br>
+    <p class="small"><strong>"If hashrate drops, Bitcoin is broken."</strong><br>
       Bitcoin keeps running. Difficulty adjusts. The system is designed for change.
     </p>
 
-    <p class="small"><strong>“High difficulty is bad for Bitcoin.”</strong><br>
+    <p class="small"><strong>"High difficulty is bad for Bitcoin."</strong><br>
       Difficulty simply reflects competition for blocks — not network failure.
     </p>
 
-    <p class="small"><strong>“Miners control Bitcoin.”</strong><br>
-      Miners provide security, but nodes enforce the rules. Miners can’t change the rules unilaterally.
+    <p class="small"><strong>"Miners control Bitcoin."</strong><br>
+      Miners provide security, but nodes enforce the rules. Miners can't change the rules unilaterally.
     </p>
 
-    <p class="small"><strong>“Hashrate = price.”</strong><br>
+    <p class="small"><strong>"Hashrate = price."</strong><br>
       They can influence each other over long timeframes, but hashrate is primarily a security metric.
     </p>
   </section>
@@ -338,7 +384,7 @@ margin:8px 0 0 18px
     </p>
 
     <p class="small"><strong>Why should a normal person care?</strong><br>
-      Because it’s proof Bitcoin is self-stabilizing. It adapts without leadership, and that resilience is the point.
+      Because it's proof Bitcoin is self-stabilizing. It adapts without leadership, and that resilience is the point.
     </p>
 
     <div class="quote small">
@@ -346,7 +392,7 @@ margin:8px 0 0 18px
     </div>
   </section>
 
-</main>                     
+</main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -355,6 +401,7 @@ margin:8px 0 0 18px
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
