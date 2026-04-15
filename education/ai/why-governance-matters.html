@@ -7,7 +7,28 @@
 <link rel="alternate icon" href="/assets/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
-<title>Why Governance Matters — What It Means</title>
+<title>Why Governance Matters — What It Means | Satoshium Knowledge Layer</title>
+<!-- TIER 3 — SEO: added meta description (was missing) -->
+<meta name="description" content="Why governance matters for AI and intelligent systems — how rules, oversight, accountability, and transparent standards help ensure that powerful systems remain trustworthy, reviewable, and aligned within the Satoshium decentralized intelligence framework." />
+
+<!-- TIER 3 — SEO: Open Graph metadata -->
+<meta property="og:title" content="Why Governance Matters — What It Means | Satoshium Knowledge Layer" />
+<meta property="og:description" content="Why governance matters for AI and intelligent systems — how rules, oversight, accountability, and transparent standards help ensure that powerful systems remain trustworthy, reviewable, and aligned within the Satoshium decentralized intelligence framework." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://satoshium.info/education/ai/why-governance-matters.html" />
+<meta property="og:image" content="https://satoshium.link/assets/opengraph.jpg" />
+<meta property="og:site_name" content="Satoshium" />
+<meta property="og:locale" content="en_US" />
+
+<!-- TIER 3 — SEO: Twitter Card metadata -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Why Governance Matters — What It Means | Satoshium Knowledge Layer" />
+<meta name="twitter:description" content="Why governance matters for AI and intelligent systems — how rules, oversight, accountability, and transparent standards help ensure that powerful systems remain trustworthy, reviewable, and aligned within the Satoshium decentralized intelligence framework." />
+<meta name="twitter:image" content="https://satoshium.link/assets/opengraph.jpg" />
+<meta name="twitter:site" content="@SatoshiumAI" />
+
+<!-- TIER 3 — SEO: canonical URL -->
+<link rel="canonical" href="https://satoshium.info/education/ai/why-governance-matters.html" />
 
 <style>
 
@@ -60,9 +81,15 @@ body{
  margin-bottom:40px;
  color:var(--muted);
 }
- 
+
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+
+/* TIER 3 — ACCESSIBILITY: visible focus ring for keyboard navigation */
+a:focus-visible{
+ outline:2px solid var(--gold2);
+ outline-offset:2px;
+}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -112,6 +139,7 @@ margin:22px 0
 
 /* ===== Cards ===== */
 
+/* TIER 3 — CSS: consolidated 3 duplicate .card blocks into one */
 .card{
 position: relative;
 overflow: hidden;
@@ -122,7 +150,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -131,6 +159,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -152,17 +182,9 @@ position:relative;
 z-index:1
 }
 
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -188,6 +210,18 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* TIER 3 — ACCESSIBILITY: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce){
+ .wrap.content{
+  animation:none;
+  opacity:1;
+  transform:none;
+ }
+ .card{
+  transition:none;
+ }
+}
+
 </style>
 </head>
 
@@ -198,7 +232,7 @@ margin:8px 0 0 18px
 
 <main class="wrap content">
 
-<div class="pill">⚖️ Why governance matters</div>
+<div class="pill">&#x2696;&#xFE0F; Why governance matters</div>
 
 <h1 style="margin-top:12px;">Why governance matters, explained</h1>
 
@@ -210,7 +244,7 @@ defined responsibilities, and transparent standards of accountability.
 
 <div class="card">
 
-<h2 style="margin-top:0;">🔎 The simple definition</h2>
+<h2 style="margin-top:0;">&#x1F50E; The simple definition</h2>
 
 <p>
 <b>Governance is the framework of rules, oversight, accountability, and decision-making that helps guide how powerful systems are built, used, and trusted.</b>
@@ -225,20 +259,20 @@ That creates risk for users, organizations, and society.
 
 <div class="card">
 
-<h2 style="margin-top:0;">🧠 What governance does</h2>
+<h2 style="margin-top:0;">&#x1F9E0; What governance does</h2>
 
 <ul>
-<li><b>Sets rules</b> — defines what systems should and should not do</li>
-<li><b>Creates accountability</b> — makes responsibility visible</li>
-<li><b>Establishes oversight</b> — allows review, correction, and intervention</li>
-<li><b>Builds trust</b> — helps users understand why a system can be relied on</li>
+<li><b>Sets rules</b> &#x2014; defines what systems should and should not do</li>
+<li><b>Creates accountability</b> &#x2014; makes responsibility visible</li>
+<li><b>Establishes oversight</b> &#x2014; allows review, correction, and intervention</li>
+<li><b>Builds trust</b> &#x2014; helps users understand why a system can be relied on</li>
 </ul>
 
 </div>
 
 <div class="card">
 
-<h2 style="margin-top:0;">⚙️ Why powerful systems need it</h2>
+<h2 style="margin-top:0;">&#x2699;&#xFE0F; Why powerful systems need it</h2>
 
 <p>
 The more capable a system becomes, the more important it is that its actions are understandable,
@@ -260,7 +294,7 @@ Governance helps keep increasing power aligned with increasing responsibility.
 
 <div class="card">
 
-<h2 style="margin-top:0;">🧱 What good governance looks like</h2>
+<h2 style="margin-top:0;">&#x1F9F1; What good governance looks like</h2>
 
 <p>
 Good governance is not just restriction. It is structure.
@@ -279,7 +313,7 @@ It makes systems more reliable by making expectations explicit.
 
 <div class="card">
 
-<h2 style="margin-top:0;">⚠️ What happens without governance</h2>
+<h2 style="margin-top:0;">&#x26A0;&#xFE0F; What happens without governance</h2>
 
 <p>
 When strong systems operate without clear guardrails, problems can spread faster and become harder to correct.
@@ -297,10 +331,10 @@ When strong systems operate without clear guardrails, problems can spread faster
 
 <div class="card">
 
-<h2 style="margin-top:0;">🧭 Why governance matters to Satoshium</h2>
+<h2 style="margin-top:0;">&#x1F9ED; Why governance matters to Satoshium</h2>
 
 <p>
-Satoshium is built around the idea that intelligence should not only be useful —
+Satoshium is built around the idea that intelligence should not only be useful &#x2014;
 it should also be <b>trustworthy, reviewable, and aligned with durable rules</b>.
 </p>
 
@@ -325,6 +359,7 @@ In Satoshium, governance is part of how trust is built into the system architect
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
