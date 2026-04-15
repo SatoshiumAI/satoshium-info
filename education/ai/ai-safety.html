@@ -7,7 +7,28 @@
 <link rel="alternate icon" href="/assets/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
-<title>AI Safety — What It Is</title>
+<title>AI Safety — What It Is | Satoshium Knowledge Layer</title>
+<!-- TIER 3 — SEO: added meta description (was missing) -->
+<meta name="description" content="AI safety explained — how intelligent systems are designed to behave reliably, stay within defined limits, and remain understandable. Covers agent governance, trust verification, and architectural safety within the Satoshium decentralized intelligence framework." />
+
+<!-- TIER 3 — SEO: Open Graph metadata -->
+<meta property="og:title" content="AI Safety — What It Is | Satoshium Knowledge Layer" />
+<meta property="og:description" content="AI safety explained — how intelligent systems are designed to behave reliably, stay within defined limits, and remain understandable. Covers agent governance, trust verification, and architectural safety within the Satoshium decentralized intelligence framework." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://satoshium.info/ai-safety.html" />
+<meta property="og:image" content="https://satoshium.link/assets/opengraph.jpg" />
+<meta property="og:site_name" content="Satoshium" />
+<meta property="og:locale" content="en_US" />
+
+<!-- TIER 3 — SEO: Twitter Card metadata -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI Safety — What It Is | Satoshium Knowledge Layer" />
+<meta name="twitter:description" content="AI safety explained — how intelligent systems are designed to behave reliably, stay within defined limits, and remain understandable. Covers agent governance, trust verification, and architectural safety within the Satoshium decentralized intelligence framework." />
+<meta name="twitter:image" content="https://satoshium.link/assets/opengraph.jpg" />
+<meta name="twitter:site" content="@SatoshiumAI" />
+
+<!-- TIER 3 — SEO: canonical URL -->
+<link rel="canonical" href="https://satoshium.info/ai-safety.html" />
 
 <style>
 
@@ -62,6 +83,12 @@ body{
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
 
+/* TIER 3 — ACCESSIBILITY: visible focus ring for keyboard navigation */
+a:focus-visible{
+ outline:2px solid var(--gold2);
+ outline-offset:2px;
+}
+
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
  .wrap.content{
@@ -110,6 +137,7 @@ margin:22px 0
 
 /* ===== Cards ===== */
 
+/* TIER 3 — CSS: consolidated 3 duplicate .card blocks into one */
 .card{
 position: relative;
 overflow: hidden;
@@ -120,7 +148,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -129,6 +157,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -149,17 +179,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -185,6 +208,18 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* TIER 3 — ACCESSIBILITY: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce){
+ .wrap.content{
+  animation:none;
+  opacity:1;
+  transform:none;
+ }
+ .card{
+  transition:none;
+ }
+}
+
 </style>
 </head>
 
@@ -195,7 +230,7 @@ margin:8px 0 0 18px
 
 <main class="wrap content">
 
-<div class="pill">🛡️ AI Safety</div>
+<div class="pill">&#x1F6E1;&#xFE0F; AI Safety</div>
 
 <h1 style="margin-top:12px;">AI safety, explained</h1>
 
@@ -208,7 +243,7 @@ convenience and more about trust, control, and verifiability.
 
 <div class="card">
 
-<h2 style="margin-top:0;">🔎 The simple definition</h2>
+<h2 style="margin-top:0;">&#x1F50E; The simple definition</h2>
 
 <p>
 <b>AI safety is the effort to make intelligent systems useful without making them unpredictable, deceptive, or unsafe.</b>
@@ -222,48 +257,48 @@ A capable system is not automatically a trustworthy one. Safety is what turns ra
 
 <div class="card">
 
-<h2 style="margin-top:0;">⚠️ Why AI safety matters</h2>
+<h2 style="margin-top:0;">&#x26A0;&#xFE0F; Why AI safety matters</h2>
 
 <ul>
-<li><b>Power grows quickly</b> — capable systems can act at scale</li>
-<li><b>Errors compound</b> — small mistakes can create large consequences</li>
-<li><b>Humans need oversight</b> — systems should remain inspectable and correctable</li>
-<li><b>Trust must be earned</b> — reliability matters more than hype</li>
+<li><b>Power grows quickly</b> &#x2014; capable systems can act at scale</li>
+<li><b>Errors compound</b> &#x2014; small mistakes can create large consequences</li>
+<li><b>Humans need oversight</b> &#x2014; systems should remain inspectable and correctable</li>
+<li><b>Trust must be earned</b> &#x2014; reliability matters more than hype</li>
 </ul>
 
 </div>
 
 <div class="card">
 
-<h2 style="margin-top:0;">🧱 What AI safety tries to prevent</h2>
+<h2 style="margin-top:0;">&#x1F9F1; What AI safety tries to prevent</h2>
 
 <ul>
-<li><b>Unclear behavior</b> — systems acting in ways humans cannot easily explain</li>
-<li><b>Rule-breaking</b> — ignoring boundaries, policies, or intended constraints</li>
-<li><b>Overconfidence</b> — outputs presented as reliable when they are not</li>
-<li><b>Goal drift</b> — optimizing for the wrong objective or shortcut</li>
-<li><b>Harmful autonomy</b> — systems taking actions beyond acceptable limits</li>
+<li><b>Unclear behavior</b> &#x2014; systems acting in ways humans cannot easily explain</li>
+<li><b>Rule-breaking</b> &#x2014; ignoring boundaries, policies, or intended constraints</li>
+<li><b>Overconfidence</b> &#x2014; outputs presented as reliable when they are not</li>
+<li><b>Goal drift</b> &#x2014; optimizing for the wrong objective or shortcut</li>
+<li><b>Harmful autonomy</b> &#x2014; systems taking actions beyond acceptable limits</li>
 </ul>
 
 </div>
 
 <div class="card">
 
-<h2 style="margin-top:0;">⚙️ How safety is improved</h2>
+<h2 style="margin-top:0;">&#x2699;&#xFE0F; How safety is improved</h2>
 
 <ul>
-<li><b>Clear rules</b> — define what the system may and may not do</li>
-<li><b>Testing</b> — simulate failure cases and edge conditions</li>
-<li><b>Monitoring</b> — inspect outputs, decisions, and system behavior</li>
-<li><b>Fallback controls</b> — maintain human override and bounded execution</li>
-<li><b>Auditability</b> — keep records that allow decisions to be reviewed later</li>
+<li><b>Clear rules</b> &#x2014; define what the system may and may not do</li>
+<li><b>Testing</b> &#x2014; simulate failure cases and edge conditions</li>
+<li><b>Monitoring</b> &#x2014; inspect outputs, decisions, and system behavior</li>
+<li><b>Fallback controls</b> &#x2014; maintain human override and bounded execution</li>
+<li><b>Auditability</b> &#x2014; keep records that allow decisions to be reviewed later</li>
 </ul>
 
 </div>
 
 <div class="card">
 
-<h2 style="margin-top:0;">🤖 AI safety and agents</h2>
+<h2 style="margin-top:0;">&#x1F916; AI safety and agents</h2>
 
 <p>
 AI safety becomes even more important when moving from chat-style systems to <b>agents</b> that can plan, decide, and act.
@@ -280,7 +315,7 @@ AI safety becomes even more important when moving from chat-style systems to <b>
 
 <div class="card">
 
-<h2 style="margin-top:0;">🧭 Why Satoshium cares</h2>
+<h2 style="margin-top:0;">&#x1F9ED; Why Satoshium cares</h2>
 
 <p>
 Satoshium is not interested in intelligence without discipline.
@@ -301,7 +336,7 @@ In Satoshium, safety is not an afterthought. It is part of the architecture.
 
 <hr />
 
- </main>                     
+</main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -310,6 +345,7 @@ In Satoshium, safety is not an afterthought. It is part of the architecture.
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
