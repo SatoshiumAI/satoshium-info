@@ -7,8 +7,25 @@
 <link rel="alternate icon" href="/assets/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
-<title>Layer-2 basics • Satoshium</title>
+<title>Layer-2 basics | Satoshium</title>
 <meta name="description" content="Layer-2 basics explains what Layer 2 means on Bitcoin, why it exists, how it differs from the base layer, and how to think about trust, tradeoffs, and safety.">
+<link rel="canonical" href="https://satoshium.info/education/bitcoin/layer-2-basics.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Layer-2 basics | Satoshium">
+<meta property="og:description" content="Layer-2 basics explains what Layer 2 means on Bitcoin, why it exists, how it differs from the base layer, and how to think about trust, tradeoffs, and safety.">
+<meta property="og:url" content="https://satoshium.info/education/bitcoin/layer-2-basics.html">
+<meta property="og:image" content="https://satoshium.link/assets/btc-seal.png">
+<meta property="og:site_name" content="Satoshium">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Layer-2 basics | Satoshium">
+<meta name="twitter:description" content="Layer-2 basics explains what Layer 2 means on Bitcoin, why it exists, how it differs from the base layer, and how to think about trust, tradeoffs, and safety.">
+<meta name="twitter:image" content="https://satoshium.link/assets/btc-seal.png">
+<meta name="twitter:site" content="@SatoshiumAI">
 
 <style>
 
@@ -47,6 +64,7 @@ body{
 
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -107,7 +125,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -116,6 +134,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -136,17 +156,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -178,6 +191,48 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* ===== Rich markup ===== */
+
+.small{font-size:14px;line-height:1.6}
+
+.kicker{
+font-size:11px;
+text-transform:uppercase;
+letter-spacing:.08em;
+color:var(--muted);
+margin-bottom:2px;
+}
+
+.toc{
+padding-left:20px;
+margin:10px 0 0;
+}
+.toc li{margin-bottom:6px}
+
+.quote{
+border-left:3px solid var(--gold);
+padding:8px 12px;
+margin:14px 0 0;
+color:var(--muted);
+font-style:italic;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+@media(max-width:760px){
+.grid{grid-template-columns:1fr}
+}
+
+/* ===== Reduced motion ===== */
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+ .card{transition:none}
+}
+
 </style>
 </head>
 
@@ -185,25 +240,25 @@ margin:8px 0 0 18px
 
 <div id="topbar-slot" data-topbar="platform"></div>
 <script src="/components/topbar-loader.js"></script>
- 
+
 <main class="wrap content">
 
   <div class="pill">⚡ Lightning &amp; scaling</div>
   <h1>Layer-2 basics</h1>
 
   <p class="small">
-    “Layer 2” means building on top of Bitcoin without changing Bitcoin’s core rules. The goal is simple: keep the base layer conservative and verifiable, while enabling faster payments and new capabilities in higher layers.
+    "Layer 2" means building on top of Bitcoin without changing Bitcoin's core rules. The goal is simple: keep the base layer conservative and verifiable, while enabling faster payments and new capabilities in higher layers.
   </p>
 
   <div class="grid">
     <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
-      <div class="kicker">What you’ll learn</div>
+      <div class="kicker">What you'll learn</div>
       <h2 style="margin-top:6px;">✅ A calm mental model</h2>
       <ul class="small">
-        <li>What Layer 2 means (and what it doesn’t)</li>
+        <li>What Layer 2 means (and what it doesn't)</li>
         <li>Why Bitcoin needs layers to scale</li>
         <li>Common Layer-2 types and the tradeoffs</li>
-        <li>How to evaluate “trust” and “custody” on L2</li>
+        <li>How to evaluate "trust" and "custody" on L2</li>
       </ul>
       <div class="quote small">
         Satoshium lens: Bitcoin stays simple; the world builds complexity above it.
@@ -246,7 +301,7 @@ margin:8px 0 0 18px
     <div class="kicker">2) The reason</div>
     <h2>Why Layer 2 exists</h2>
     <p class="small">
-      Bitcoin intentionally limits block space so that anyone can verify the network. That makes Bitcoin decentralized and resilient — but it also means you can’t fit the entire planet’s daily payments directly on-chain.
+      Bitcoin intentionally limits block space so that anyone can verify the network. That makes Bitcoin decentralized and resilient — but it also means you can't fit the entire planet's daily payments directly on-chain.
     </p>
     <ul class="small">
       <li>On-chain is global settlement — not high-speed retail</li>
@@ -254,7 +309,7 @@ margin:8px 0 0 18px
       <li>Layers let Bitcoin stay stable while usage grows</li>
     </ul>
     <div class="quote small">
-      Bitcoin’s “slowness” is part of its decentralization strategy.
+      Bitcoin's "slowness" is part of its decentralization strategy.
     </div>
   </section>
 
@@ -269,10 +324,10 @@ margin:8px 0 0 18px
       <li><strong>L2</strong> = speed layer (payments / activity)</li>
     </ul>
     <p class="small">
-      This is similar to how large banks don’t settle every internal transaction in real time. They net activity and settle in batches.
+      This is similar to how large banks don't settle every internal transaction in real time. They net activity and settle in batches.
     </p>
     <div class="quote small">
-      L2 is “activity.” L1 is “finality.”
+      L2 is "activity." L1 is "finality."
     </div>
   </section>
 
@@ -280,7 +335,7 @@ margin:8px 0 0 18px
     <div class="kicker">4) Common patterns</div>
     <h2>Common Layer-2 types</h2>
     <p class="small">
-      Layer 2 isn’t one thing. It’s a category. Here are common patterns you’ll hear about:
+      Layer 2 isn't one thing. It's a category. Here are common patterns you'll hear about:
     </p>
 
     <p class="small"><strong>Lightning Network (payments)</strong><br>
@@ -314,7 +369,7 @@ margin:8px 0 0 18px
     <ul class="small">
       <li>Operator risk (someone can freeze, censor, or rug)</li>
       <li>Bridge risk (moving BTC across systems can be the weak point)</li>
-      <li>Custody risk (who controls the keys while you’re on the L2?)</li>
+      <li>Custody risk (who controls the keys while you're on the L2?)</li>
       <li>Complexity risk (harder systems are harder to audit and use safely)</li>
     </ul>
     <div class="quote small">
@@ -330,10 +385,10 @@ margin:8px 0 0 18px
     </p>
     <ul class="small">
       <li><strong>Self-custody L2</strong>: you hold keys, but complexity may be higher</li>
-      <li><strong>Custodial L2</strong>: easiest UX, but you’re trusting a provider</li>
+      <li><strong>Custodial L2</strong>: easiest UX, but you're trusting a provider</li>
     </ul>
     <div class="quote small">
-      Satoshium rule: keep long-term savings on L1 cold storage. Use L2 as a “spending layer.”
+      Satoshium rule: keep long-term savings on L1 cold storage. Use L2 as a "spending layer."
     </div>
   </section>
 
@@ -341,7 +396,7 @@ margin:8px 0 0 18px
     <div class="kicker">7) Practical evaluation</div>
     <h2>How to evaluate an L2 (simple checklist)</h2>
     <ul class="small">
-      <li><strong>Custody:</strong> Do you hold keys? If not, it’s custodial.</li>
+      <li><strong>Custody:</strong> Do you hold keys? If not, it's custodial.</li>
       <li><strong>Exit:</strong> Can you return to L1 reliably and independently?</li>
       <li><strong>Operators:</strong> Who runs it? How many? What happens if they fail?</li>
       <li><strong>Security model:</strong> What is enforced by Bitcoin vs enforced by people?</li>
@@ -350,7 +405,7 @@ margin:8px 0 0 18px
       <li><strong>Your balance:</strong> Are you using it for spending or saving?</li>
     </ul>
     <div class="quote small">
-      If you can’t clearly explain the trust model, keep the balance small.
+      If you can't clearly explain the trust model, keep the balance small.
     </div>
   </section>
 
@@ -359,18 +414,18 @@ margin:8px 0 0 18px
     <h2>Quick FAQ</h2>
 
     <p class="small"><strong>Is Lightning a Layer 2?</strong><br>
-      Yes. It’s the most widely used Bitcoin L2 for instant payments.
+      Yes. It's the most widely used Bitcoin L2 for instant payments.
     </p>
 
     <p class="small"><strong>Does Layer 2 change Bitcoin?</strong><br>
-      No. A real L2 builds on top of Bitcoin without rewriting Bitcoin’s base rules.
+      No. A real L2 builds on top of Bitcoin without rewriting Bitcoin's base rules.
     </p>
 
     <p class="small"><strong>Is Layer 2 always safe?</strong><br>
-      It depends on the trust model. L2 adds tradeoffs. That’s why the checklist matters.
+      It depends on the trust model. L2 adds tradeoffs. That's why the checklist matters.
     </p>
 
-    <p class="small"><strong>What’s the “best” approach for most people?</strong><br>
+    <p class="small"><strong>What's the "best" approach for most people?</strong><br>
       Keep savings on L1 cold storage. Use L2 for everyday spending and small balances.
     </p>
 
@@ -379,7 +434,7 @@ margin:8px 0 0 18px
     </div>
   </section>
 
- </main>                     
+ </main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -388,6 +443,7 @@ margin:8px 0 0 18px
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
