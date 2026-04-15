@@ -7,8 +7,28 @@
 <link rel="alternate icon" href="/assets/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
-<title>Instant payments • Satoshium</title>
-<meta name="description" content="Instant payments explains why Bitcoin on-chain is slow by design, how faster payments work, and what Lightning adds to Bitcoin without changing Bitcoin’s base rules.">
+<title>Instant Payments | Satoshium Knowledge Layer</title>
+<!-- TIER 3 — SEO: updated meta description for consistency -->
+<meta name="description" content="Instant payments explained — why Bitcoin on-chain is slow by design, how faster payments work through Lightning, and what scaling layers add to Bitcoin without changing its base rules." />
+
+<!-- TIER 3 — SEO: Open Graph metadata -->
+<meta property="og:title" content="Instant Payments | Satoshium Knowledge Layer" />
+<meta property="og:description" content="Instant payments explained — why Bitcoin on-chain is slow by design, how faster payments work through Lightning, and what scaling layers add to Bitcoin without changing its base rules." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://satoshium.info/education/bitcoin/instant-payments.html" />
+<meta property="og:image" content="https://satoshium.link/assets/opengraph.jpg" />
+<meta property="og:site_name" content="Satoshium" />
+<meta property="og:locale" content="en_US" />
+
+<!-- TIER 3 — SEO: Twitter Card metadata -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Instant Payments | Satoshium Knowledge Layer" />
+<meta name="twitter:description" content="Instant payments explained — why Bitcoin on-chain is slow by design, how faster payments work through Lightning, and what scaling layers add to Bitcoin without changing its base rules." />
+<meta name="twitter:image" content="https://satoshium.link/assets/opengraph.jpg" />
+<meta name="twitter:site" content="@SatoshiumAI" />
+
+<!-- TIER 3 — SEO: canonical URL -->
+<link rel="canonical" href="https://satoshium.info/education/bitcoin/instant-payments.html" />
 
 <style>
 
@@ -47,6 +67,12 @@ body{
 
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+
+/* TIER 3 — ACCESSIBILITY: visible focus ring for keyboard navigation */
+a:focus-visible{
+ outline:2px solid var(--gold2);
+ outline-offset:2px;
+}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -96,6 +122,7 @@ margin:22px 0
 
 /* ===== Cards ===== */
 
+/* TIER 3 — CSS: consolidated 3 duplicate .card blocks into one */
 .card{
 position: relative;
 overflow: hidden;
@@ -106,7 +133,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -115,6 +142,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -135,17 +164,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -177,6 +199,59 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* TIER 3 — CSS: added missing rules for classes used in markup (.small, .kicker, .toc, .quote, .grid) */
+.small{
+ font-size:14px;
+ line-height:1.6;
+}
+
+.kicker{
+ font-size:11px;
+ font-weight:700;
+ letter-spacing:.06em;
+ text-transform:uppercase;
+ color:var(--gold);
+ margin-bottom:4px;
+}
+
+.toc{
+ padding-left:20px;
+ margin:10px 0 0;
+}
+.toc li{
+ margin-bottom:6px;
+}
+
+.quote{
+ margin-top:14px;
+ padding:12px 16px;
+ border-left:3px solid var(--gold);
+ color:var(--muted);
+ font-style:italic;
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:16px;
+}
+
+@media (max-width:760px){
+ .grid{grid-template-columns:1fr}
+}
+
+/* TIER 3 — ACCESSIBILITY: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce){
+ .wrap.content{
+  animation:none;
+  opacity:1;
+  transform:none;
+ }
+ .card{
+  transition:none;
+ }
+}
+
 </style>
 </head>
 
@@ -187,38 +262,38 @@ margin:8px 0 0 18px
 
 <main class="wrap content">
 
-  <div class="pill">⚡ Lightning &amp; scaling</div>
+  <div class="pill">&#x26A1; Lightning &amp; scaling</div>
   <h1>Instant payments</h1>
 
   <p class="small">
-    Bitcoin on-chain is secure settlement — not swipe-speed payments. Instant payments come from scaling layers that keep Bitcoin’s base rules intact while enabling fast, low-cost transactions for everyday use.
+    Bitcoin on-chain is secure settlement &#x2014; not swipe-speed payments. Instant payments come from scaling layers that keep Bitcoin's base rules intact while enabling fast, low-cost transactions for everyday use.
   </p>
 
   <div class="grid">
     <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
-      <div class="kicker">What you’ll learn</div>
-      <h2 style="margin-top:6px;">✅ The “why” and the “how”</h2>
+      <div class="kicker">What you'll learn</div>
+      <h2 style="margin-top:6px;">&#x2705; The "why" and the "how"</h2>
       <ul class="small">
         <li>Why Bitcoin base-layer is intentionally slower</li>
-        <li>What “instant” really means (and what it doesn’t)</li>
+        <li>What "instant" really means (and what it doesn't)</li>
         <li>How Lightning achieves speed without changing Bitcoin</li>
         <li>Simple mental model for using Lightning safely</li>
       </ul>
       <div class="quote small">
-        Satoshium lens: scale happens in layers — truth stays on the base layer.
+        Satoshium lens: scale happens in layers &#x2014; truth stays on the base layer.
       </div>
     </div>
 
     <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="kicker">Quick navigation</div>
-      <h2 style="margin-top:6px;">📌 Sections</h2>
+      <h2 style="margin-top:6px;">&#x1F4CC; Sections</h2>
 
       <ol class="toc">
         <li><a href="#overview">1) The simple explanation</a></li>
-        <li><a href="#whychain">2) Why on-chain isn’t “instant”</a></li>
+        <li><a href="#whychain">2) Why on-chain isn't "instant"</a></li>
         <li><a href="#layers">3) Layers: settlement vs payments</a></li>
         <li><a href="#lightning">4) Lightning in plain English</a></li>
-        <li><a href="#channels">5) Channels & liquidity (the key idea)</a></li>
+        <li><a href="#channels">5) Channels &amp; liquidity (the key idea)</a></li>
         <li><a href="#custody">6) Wallet types: what changes with Lightning</a></li>
         <li><a href="#safety">7) Safety rules (simple + real)</a></li>
         <li><a href="#usecases">8) Real-world use</a></li>
@@ -231,7 +306,7 @@ margin:8px 0 0 18px
     <div class="kicker">1) The point</div>
     <h2>The simple explanation</h2>
     <p class="small">
-      Bitcoin’s base layer (on-chain) is optimized for <strong>security</strong> and <strong>final settlement</strong>.
+      Bitcoin's base layer (on-chain) is optimized for <strong>security</strong> and <strong>final settlement</strong>.
       Instant payments come from higher layers that use Bitcoin as the foundation.
     </p>
     <ul class="small">
@@ -239,15 +314,15 @@ margin:8px 0 0 18px
       <li>Lightning: fast, low-fee, great for everyday payments</li>
     </ul>
     <div class="quote small">
-      Think: base layer = “bank wire.” Lightning = “tap to pay.”
+      Think: base layer = "bank wire." Lightning = "tap to pay."
     </div>
   </section>
 
   <section class="card" id="whychain" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
-    <div class="kicker">2) Why it’s designed that way</div>
-    <h2>Why on-chain isn’t “instant”</h2>
+    <div class="kicker">2) Why it's designed that way</div>
+    <h2>Why on-chain isn't "instant"</h2>
     <p class="small">
-      Bitcoin produces blocks about every ~10 minutes. That isn’t a flaw — it’s part of the security model.
+      Bitcoin produces blocks about every ~10 minutes. That isn't a flaw &#x2014; it's part of the security model.
       Slower blocks reduce the chance of conflicting histories and keep verification simple for anyone running a node.
     </p>
     <ul class="small">
@@ -256,7 +331,7 @@ margin:8px 0 0 18px
       <li>Fees rise during congestion because demand is real</li>
     </ul>
     <div class="quote small">
-      Bitcoin’s job is to be hard to change and easy to verify.
+      Bitcoin's job is to be hard to change and easy to verify.
     </div>
   </section>
 
@@ -264,7 +339,7 @@ margin:8px 0 0 18px
     <div class="kicker">3) The mental model</div>
     <h2>Layers: settlement vs payments</h2>
     <p class="small">
-      The internet scaled with layers (TCP/IP → HTTP → apps). Money can scale the same way.
+      The internet scaled with layers (TCP/IP &#x2192; HTTP &#x2192; apps). Money can scale the same way.
       Bitcoin is the settlement layer; Lightning is a payment layer built on top.
     </p>
     <ul class="small">
@@ -289,13 +364,13 @@ margin:8px 0 0 18px
       <li>Most payments complete in seconds</li>
     </ul>
     <div class="quote small">
-      Lightning is “bitcoin, but faster,” without changing Bitcoin’s base rules.
+      Lightning is "bitcoin, but faster," without changing Bitcoin's base rules.
     </div>
   </section>
 
   <section class="card" id="channels" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
     <div class="kicker">5) The key concept</div>
-    <h2>Channels & liquidity (the key idea)</h2>
+    <h2>Channels &amp; liquidity (the key idea)</h2>
     <p class="small">
       Lightning works through <strong>payment channels</strong>. A channel is like a shared ledger between two parties
       that can update instantly many times, then settle on-chain later.
@@ -303,10 +378,10 @@ margin:8px 0 0 18px
     <ul class="small">
       <li>Channels are funded with bitcoin (on-chain)</li>
       <li>Inside the channel, balances update instantly</li>
-      <li>“Liquidity” means having spendable capacity in the direction you need</li>
+      <li>"Liquidity" means having spendable capacity in the direction you need</li>
     </ul>
     <div class="quote small">
-      If a payment fails on Lightning, it’s usually a liquidity path issue — not “Bitcoin broke.”
+      If a payment fails on Lightning, it's usually a liquidity path issue &#x2014; not "Bitcoin broke."
     </div>
   </section>
 
@@ -314,7 +389,7 @@ margin:8px 0 0 18px
     <div class="kicker">6) Wallet reality</div>
     <h2>Wallet types: what changes with Lightning</h2>
     <p class="small">
-      Lightning introduces a new spectrum of wallet choices — from fully self-custodial to custodial convenience.
+      Lightning introduces a new spectrum of wallet choices &#x2014; from fully self-custodial to custodial convenience.
       The tradeoff is usually: convenience vs sovereignty.
     </p>
     <ul class="small">
@@ -323,7 +398,7 @@ margin:8px 0 0 18px
       <li><strong>Node-based</strong>: most control, most responsibility</li>
     </ul>
     <div class="quote small">
-      Satoshium rule: keep long-term savings on-chain cold. Use Lightning like a “spending wallet.”
+      Satoshium rule: keep long-term savings on-chain cold. Use Lightning like a "spending wallet."
     </div>
   </section>
 
@@ -334,8 +409,8 @@ margin:8px 0 0 18px
       <li>Treat Lightning like cash: keep a small spending balance</li>
       <li>Use on-chain cold storage for long-term savings</li>
       <li>Start small, do a test payment, then scale up</li>
-      <li>Don’t confuse “fast payments” with “no risk”</li>
-      <li>If you don’t control the keys, it’s custodial</li>
+      <li>Don't confuse "fast payments" with "no risk"</li>
+      <li>If you don't control the keys, it's custodial</li>
     </ul>
     <div class="quote small">
       The safest path: small Lightning wallet for spending + cold storage for saving.
@@ -363,8 +438,8 @@ margin:8px 0 0 18px
     <div class="kicker">9) Quick FAQ</div>
     <h2>Quick FAQ</h2>
 
-    <p class="small"><strong>Is Lightning “a different coin”?</strong><br>
-      No. It’s bitcoin payments using a second-layer network.
+    <p class="small"><strong>Is Lightning "a different coin"?</strong><br>
+      No. It's bitcoin payments using a second-layer network.
     </p>
 
     <p class="small"><strong>Do Lightning payments settle on-chain?</strong><br>
@@ -372,20 +447,19 @@ margin:8px 0 0 18px
     </p>
 
     <p class="small"><strong>Is Lightning always cheaper?</strong><br>
-      Usually, but it depends on routing and demand. It’s designed for low fees at scale.
+      Usually, but it depends on routing and demand. It's designed for low fees at scale.
     </p>
 
-    <p class="small"><strong>What’s the best beginner setup?</strong><br>
+    <p class="small"><strong>What's the best beginner setup?</strong><br>
       A reputable Lightning wallet for small spending + on-chain cold storage for savings.
     </p>
 
     <div class="quote small">
-      Satoshium lens: Lightning is how Bitcoin becomes usable — without compromising what makes Bitcoin trustworthy.
+      Satoshium lens: Lightning is how Bitcoin becomes usable &#x2014; without compromising what makes Bitcoin trustworthy.
     </div>
   </section>
 
-              <!-- Footer mission statement + links -->
-</main>                     
+</main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -394,6 +468,7 @@ margin:8px 0 0 18px
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
