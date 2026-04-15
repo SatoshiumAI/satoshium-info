@@ -7,7 +7,25 @@
   <link rel="alternate icon" href="/assets/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <meta name="theme-color" content="#4da3ff">
-  <title>Satoshium • Bitcoin History & Origins</title>
+  <title>Bitcoin: History & Origins | Satoshium</title>
+  <meta name="description" content="Bitcoin emerged from decades of cryptography and digital cash research. Explore its origins — from early failures to the 2008 whitepaper, the Genesis Block, and early network growth.">
+  <link rel="canonical" href="https://satoshium.info/education/bitcoin/history-origins.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bitcoin: History & Origins | Satoshium">
+  <meta property="og:description" content="Bitcoin emerged from decades of cryptography and digital cash research. Explore its origins — from early failures to the 2008 whitepaper, the Genesis Block, and early network growth.">
+  <meta property="og:url" content="https://satoshium.info/education/bitcoin/history-origins.html">
+  <meta property="og:image" content="https://satoshium.link/assets/btc-seal.png">
+  <meta property="og:site_name" content="Satoshium">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bitcoin: History & Origins | Satoshium">
+  <meta name="twitter:description" content="Bitcoin emerged from decades of cryptography and digital cash research. Explore its origins — from early failures to the 2008 whitepaper, the Genesis Block, and early network growth.">
+  <meta name="twitter:image" content="https://satoshium.link/assets/btc-seal.png">
+  <meta name="twitter:site" content="@SatoshiumAI">
 
 <style>
 
@@ -46,6 +64,7 @@ body{
 
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -105,7 +124,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -114,6 +133,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -134,17 +155,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -176,6 +190,80 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* ===== Rich markup ===== */
+
+.callout{
+border:1px solid var(--line);
+border-radius:10px;
+padding:12px 14px;
+margin:14px 0 0;
+background:rgba(214,163,74,.04);
+}
+
+.grid2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+margin-top:14px;
+}
+@media(max-width:760px){
+.grid2{grid-template-columns:1fr}
+}
+
+.kvs{
+display:grid;
+grid-template-columns:auto 1fr;
+gap:6px 12px;
+align-items:baseline;
+}
+
+.k{
+font-size:13px;
+font-weight:700;
+color:var(--gold2);
+white-space:nowrap;
+}
+
+.v{
+font-size:14px;
+color:var(--text);
+}
+
+.btnrow{
+font-size:13px;
+color:var(--muted);
+margin-top:12px;
+}
+.btn{
+color:var(--gold2);
+font-weight:600;
+}
+.btn:hover{
+color:var(--gold);
+}
+
+.note{
+font-size:13px;
+font-style:italic;
+color:var(--muted);
+margin-top:10px;
+}
+
+.quote{
+border-left:3px solid var(--gold);
+padding:8px 12px;
+margin:14px 0 0;
+color:var(--muted);
+font-style:italic;
+}
+
+/* ===== Reduced motion ===== */
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+ .card{transition:none}
+}
+
 </style>
 </head>
 
@@ -183,20 +271,20 @@ margin:8px 0 0 18px
 
 <div id="topbar-slot" data-topbar="platform"></div>
 <script src="/components/topbar-loader.js"></script>
-  
+
   <main class="wrap content">
     <div class="pill">🟠 Bitcoin 101</div>
 
     <h1 style="margin-top:12px;">Bitcoin: History & Origins</h1>
     <p class="muted">
-      Bitcoin didn’t appear out of nowhere. It emerged from decades of work on cryptography, digital cash,
-      and the problem of creating money that doesn’t require trust in a central authority.
+      Bitcoin didn't appear out of nowhere. It emerged from decades of work on cryptography, digital cash,
+      and the problem of creating money that doesn't require trust in a central authority.
     </p>
 
     <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <h2>1) The world before Bitcoin</h2>
       <p class="muted">
-        Before 2008, many people tried to build “digital cash.” The hard part wasn’t making coins — it was making
+        Before 2008, many people tried to build "digital cash." The hard part wasn't making coins — it was making
         a system that prevented double-spending <em>without</em> a central operator.
       </p>
 
@@ -224,7 +312,7 @@ margin:8px 0 0 18px
       <h2>2) 2008: Satoshi Nakamoto publishes the whitepaper</h2>
       <p class="muted">
         In October 2008, someone using the name <strong>Satoshi Nakamoto</strong> published a paper titled
-        “Bitcoin: A Peer-to-Peer Electronic Cash System.” It described a way to combine cryptography and
+        "Bitcoin: A Peer-to-Peer Electronic Cash System." It described a way to combine cryptography and
         Proof-of-Work to create a ledger that anyone can verify.
       </p>
 
@@ -240,18 +328,18 @@ margin:8px 0 0 18px
       </div>
 
       <div class="btnrow">
-        <a class="btn" href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="noreferrer">Read the Whitepaper</a> | 
+        <a class="btn" href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="noreferrer">Read the Whitepaper</a> |
         <a class="btn" href="https://satoshi.nakamotoinstitute.org/" target="_blank" rel="noreferrer">Satoshi Archive</a>
       </div>
 
-      <p class="note">Tip: In Satoshium language, this is the moment “truth became inspectable.”</p>
+      <p class="note">Tip: In Satoshium language, this is the moment "truth became inspectable."</p>
     </div>
 
     <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <h2>3) 2009: The Genesis Block</h2>
       <p class="muted">
         In January 2009, Satoshi mined the first block — the <strong>Genesis Block</strong> — and launched the network.
-        This wasn’t just a technical start; it was a declaration: Bitcoin would be built in public and verified by anyone.
+        This wasn't just a technical start; it was a declaration: Bitcoin would be built in public and verified by anyone.
       </p>
 
       <div class="callout">
@@ -260,7 +348,7 @@ margin:8px 0 0 18px
           The Genesis Block contains a famous timestamp headline:
         </p>
         <div class="quote">
-          “The Times 03/Jan/2009 Chancellor on brink of second bailout for banks”
+          "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
         </div>
         <p class="note" style="margin-top:10px;">
           Many interpret this as a commentary on monetary bailouts and the need for a system not controlled by political incentives.
@@ -282,7 +370,7 @@ margin:8px 0 0 18px
         <li><strong>Culture → resilience:</strong> the social layer defended decentralization.</li>
       </ul>
 
-      <p class="note">Bitcoin isn’t a company. It’s a protocol + a set of rules that people choose to run.</p>
+      <p class="note">Bitcoin isn't a company. It's a protocol + a set of rules that people choose to run.</p>
     </div>
 
     <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
@@ -308,8 +396,7 @@ margin:8px 0 0 18px
       </div>
     </div>
 
-               <!-- Footer mission statement + links -->
-</main>                     
+</main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -318,6 +405,7 @@ margin:8px 0 0 18px
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
