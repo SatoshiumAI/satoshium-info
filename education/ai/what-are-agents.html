@@ -7,7 +7,28 @@
 <link rel="alternate icon" href="/assets/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
-<title>AI Agents — What They Are</title>
+<title>AI Agents — What They Are | Satoshium Knowledge Layer</title>
+<!-- TIER 3 — SEO: added meta description (was missing) -->
+<meta name="description" content="AI agents explained — software systems that observe, reason, and act toward goals with autonomy. Covers agent architecture, safety constraints, governance, and the role of trustworthy intelligence within the Satoshium decentralized framework." />
+
+<!-- TIER 3 — SEO: Open Graph metadata -->
+<meta property="og:title" content="AI Agents — What They Are | Satoshium Knowledge Layer" />
+<meta property="og:description" content="AI agents explained — software systems that observe, reason, and act toward goals with autonomy. Covers agent architecture, safety constraints, governance, and the role of trustworthy intelligence within the Satoshium decentralized framework." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://satoshium.info/education/ai/what-are-agents.html" />
+<meta property="og:image" content="https://satoshium.link/assets/opengraph.jpg" />
+<meta property="og:site_name" content="Satoshium" />
+<meta property="og:locale" content="en_US" />
+
+<!-- TIER 3 — SEO: Twitter Card metadata -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI Agents — What They Are | Satoshium Knowledge Layer" />
+<meta name="twitter:description" content="AI agents explained — software systems that observe, reason, and act toward goals with autonomy. Covers agent architecture, safety constraints, governance, and the role of trustworthy intelligence within the Satoshium decentralized framework." />
+<meta name="twitter:image" content="https://satoshium.link/assets/opengraph.jpg" />
+<meta name="twitter:site" content="@SatoshiumAI" />
+
+<!-- TIER 3 — SEO: canonical URL -->
+<link rel="canonical" href="https://satoshium.info/education/ai/what-are-agents.html" />
 
 <style>
 :root{
@@ -19,8 +40,8 @@
  --gold2:#f4c36a;
  --line:rgba(214,163,74,.18);
 
- /* default watermark */
- --card-wm: url('/satoshium-progress/assets/ai-seal.jpg');
+ /* TIER 3 — CSS: normalised default watermark URL to match theme-ai absolute path */
+ --card-wm: url('https://satoshium.link/assets/ai-seal.jpg');
 }
 
 /* ===== Page Themes ===== */
@@ -37,18 +58,25 @@ body.theme-ai{
  --card-wm: url('https://satoshium.link/assets/ai-seal.jpg');
 }
 
- .reflection{
+.reflection{
  margin-top:40px;
  margin-bottom:40px;
  color:var(--muted);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
- body{
+body{
  padding-top:80px;
 }
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+
+/* TIER 3 — ACCESSIBILITY: visible focus ring for keyboard navigation */
+a:focus-visible{
+ outline:2px solid var(--gold2);
+ outline-offset:2px;
+}
+
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 .wrap.content{
   opacity:0;
@@ -62,31 +90,53 @@ a:hover{color:var(--gold)}
  transform:translateY(0);
  }
 }
- 
+
 .content{padding:34px 18px 60px}
 h1,h2{margin:0 0 10px}
 h1{font-size:30px;color:var(--gold2)}
 h2{font-size:20px;color:var(--gold2);margin-top:26px}
 p,li{color:var(--text)}
 hr{border:none;border-top:1px solid var(--line);margin:22px 0}
-.card{position:relative;overflow:hidden;background:linear-gradient(to bottom right,rgba(12,16,24,.94),rgba(12,16,24,.88));border:1px solid var(--line);border-radius:16px;padding:16px 16px;margin:16px 0;box-shadow:0 0 0 1px rgba(214,163,74,.08),0 20px 50px rgba(0,0,0,.45)}
+
+/* TIER 3 — CSS: consolidated 3 duplicate .card blocks into one */
+.card{position:relative;overflow:hidden;background:linear-gradient(to bottom right,rgba(12,16,24,.94),rgba(12,16,24,.88));border:1px solid rgba(214,163,74,.15);border-radius:16px;padding:16px 16px;margin:16px 0;box-shadow:0 0 0 1px rgba(214,163,74,.08),0 20px 50px rgba(0,0,0,.45);transition:transform .18s ease, box-shadow .18s ease}
 .card::before{content:"";position:absolute;inset:-60px;background-image:var(--card-wm);background-repeat:no-repeat;background-size:min(720px,70vw);background-position:right -140px center;opacity:0.028;filter:blur(1px);pointer-events:none;z-index:0}
 .card > *{position:relative;z-index:1}
- .card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
 }
 
-.card {
- border: 1px solid rgba(214,163,74,.15);
-}
 .muted{color:var(--muted)}
 .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(214,163,74,.08);color:var(--gold2);font-size:12px;font-weight:700}
+
+/* TIER 3 — CSS: added missing .pill-link and .hero-actions rules (classes used in markup but undefined) */
+.pill-link{
+  display:inline-flex;
+  margin-right:8px;
+  margin-bottom:10px
+}
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px
+}
+
 ul{margin:8px 0 0 18px}
+
+/* TIER 3 — ACCESSIBILITY: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce){
+ .wrap.content{
+  animation:none;
+  opacity:1;
+  transform:none;
+ }
+ .card{
+  transition:none;
+ }
+}
 </style>
 </head>
 <body id="top" class="theme-ai">
@@ -94,43 +144,43 @@ ul{margin:8px 0 0 18px}
 <script src="/components/topbar-loader.js"></script>
 
 <main class="wrap content">
-<div class="pill">🤖 AI Agents</div>
+<div class="pill">&#x1F916; AI Agents</div>
 <h1 style="margin-top:12px;">AI agents, explained</h1>
 <p class="muted">
 AI agents are software systems that can observe information, make decisions, and take action toward a goal. Instead of only answering prompts, agents can follow multi-step workflows, use tools, and operate with a degree of autonomy.
 </p>
 
 <div class="card">
-<h2 style="margin-top:0;">🔎 The simple definition</h2>
+<h2 style="margin-top:0;">&#x1F50E; The simple definition</h2>
 <p><b>An AI agent is software that can perceive a task, reason about what to do next, and take action to move toward an objective.</b></p>
 <p class="muted" style="margin-top:10px;">A chatbot answers. An agent acts.</p>
 </div>
 
 <div class="card">
-<h2 style="margin-top:0;">⚙️ What makes an agent different</h2>
+<h2 style="margin-top:0;">&#x2699;&#xFE0F; What makes an agent different</h2>
 <ul>
-<li><b>Goals</b> — it is trying to accomplish something, not just reply once</li>
-<li><b>Memory</b> — it may keep context across steps</li>
-<li><b>Reasoning</b> — it can plan, compare options, and choose next actions</li>
-<li><b>Tools</b> — it may use APIs, files, search, or software systems</li>
-<li><b>Autonomy</b> — it can continue working without constant human prompting</li>
+<li><b>Goals</b> &#x2014; it is trying to accomplish something, not just reply once</li>
+<li><b>Memory</b> &#x2014; it may keep context across steps</li>
+<li><b>Reasoning</b> &#x2014; it can plan, compare options, and choose next actions</li>
+<li><b>Tools</b> &#x2014; it may use APIs, files, search, or software systems</li>
+<li><b>Autonomy</b> &#x2014; it can continue working without constant human prompting</li>
 </ul>
 </div>
 
 <div class="card">
-<h2 style="margin-top:0;">🧠 How AI agents work</h2>
+<h2 style="margin-top:0;">&#x1F9E0; How AI agents work</h2>
 <ul>
-<li><b>Input</b> — the agent receives a task, signal, or environment state</li>
-<li><b>Interpretation</b> — it analyzes context and decides what matters</li>
-<li><b>Planning</b> — it selects steps, tools, or actions</li>
-<li><b>Execution</b> — it performs those actions</li>
-<li><b>Feedback</b> — it checks results and adapts if needed</li>
+<li><b>Input</b> &#x2014; the agent receives a task, signal, or environment state</li>
+<li><b>Interpretation</b> &#x2014; it analyzes context and decides what matters</li>
+<li><b>Planning</b> &#x2014; it selects steps, tools, or actions</li>
+<li><b>Execution</b> &#x2014; it performs those actions</li>
+<li><b>Feedback</b> &#x2014; it checks results and adapts if needed</li>
 </ul>
 <p class="muted">In practice, stronger agents combine models, rules, memory, and external tools.</p>
 </div>
 
 <div class="card">
-<h2 style="margin-top:0;">🛠️ What agents can be used for</h2>
+<h2 style="margin-top:0;">&#x1F6E0;&#xFE0F; What agents can be used for</h2>
 <ul>
 <li>Research and information gathering</li>
 <li>Task automation and workflow execution</li>
@@ -141,7 +191,7 @@ AI agents are software systems that can observe information, make decisions, and
 </div>
 
 <div class="card">
-<h2 style="margin-top:0;">⚠️ Why agent safety matters</h2>
+<h2 style="margin-top:0;">&#x26A0;&#xFE0F; Why agent safety matters</h2>
 <p>Agents are more powerful than ordinary AI chat interfaces because they can take action. That makes constraints, verification, and governance much more important.</p>
 <ul>
 <li>Agents should operate within explicit boundaries</li>
@@ -149,27 +199,26 @@ AI agents are software systems that can observe information, make decisions, and
 <li>Goals should be constrained by rules, not only prompts</li>
 <li>Unsafe behavior should be blocked or redirected</li>
 </ul>
- </p>
-  <div class="hero-actions">
-   <a class="pill pill-link" href="https://satoshium.info/education/ai/ai-safety">View A.I. Safety</a> 
-  </div>
+<!-- TIER 3 — HTML: removed stray orphan </p> tag (had no matching opening <p>) -->
+<div class="hero-actions">
+   <a class="pill pill-link" href="https://satoshium.info/education/ai/ai-safety">View A.I. Safety</a>
+</div>
 </div>
 
 <div class="card">
-<h2 style="margin-top:0;">🧭 Why Satoshium cares about agents</h2>
+<h2 style="margin-top:0;">&#x1F9ED; Why Satoshium cares about agents</h2>
 <p>Satoshium is interested in agents because they are one of the clearest examples of where intelligence needs trust.</p>
 <p>If agents can plan, act, and affect real systems, then their behavior should be:</p>
 <ul>
-<li><b>Verifiable</b> — we should be able to inspect what happened</li>
-<li><b>Governed</b> — rules should constrain what agents may do</li>
-<li><b>Auditable</b> — decisions should be reviewable after the fact</li>
-<li><b>Aligned</b> — agents should operate within a durable knowledge framework</li>
+<li><b>Verifiable</b> &#x2014; we should be able to inspect what happened</li>
+<li><b>Governed</b> &#x2014; rules should constrain what agents may do</li>
+<li><b>Auditable</b> &#x2014; decisions should be reviewable after the fact</li>
+<li><b>Aligned</b> &#x2014; agents should operate within a durable knowledge framework</li>
 </ul>
 <p class="muted">The goal is not maximum autonomy. The goal is reliable, rule-bound intelligence.</p>
 </div>
-</main>                     
-<div class="wrap reflection">
-<hr />
+</main>
+<!-- TIER 3 — HTML: removed duplicate <div class="wrap reflection"> and duplicate <hr> (was doubled at lines 171-174) -->
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -178,6 +227,7 @@ AI agents are software systems that can observe information, make decisions, and
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
@@ -189,4 +239,3 @@ fetch("https://satoshium.link/components/footer.html")
 </script>
 </body>
 </html>
-
