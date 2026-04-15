@@ -7,7 +7,25 @@
   <link rel="alternate icon" href="/assets/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <meta name="theme-color" content="#4da3ff">
-  <title>Satoshium • Bitcoin 101 Glossary</title>
+  <title>Bitcoin 101 Glossary | Satoshium</title>
+  <meta name="description" content="A plain-English glossary for the most common Bitcoin terms — from addresses to UTXOs. Filter by category or search instantly.">
+  <link rel="canonical" href="https://satoshium.info/education/bitcoin/bitcoin-101-glossary.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bitcoin 101 Glossary | Satoshium">
+  <meta property="og:description" content="A plain-English glossary for the most common Bitcoin terms — from addresses to UTXOs. Filter by category or search instantly.">
+  <meta property="og:url" content="https://satoshium.info/education/bitcoin/bitcoin-101-glossary.html">
+  <meta property="og:image" content="https://satoshium.link/assets/btc-seal.png">
+  <meta property="og:site_name" content="Satoshium">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bitcoin 101 Glossary | Satoshium">
+  <meta name="twitter:description" content="A plain-English glossary for the most common Bitcoin terms — from addresses to UTXOs. Filter by category or search instantly.">
+  <meta name="twitter:image" content="https://satoshium.link/assets/btc-seal.png">
+  <meta name="twitter:site" content="@SatoshiumAI">
 
 <style>
 
@@ -46,6 +64,7 @@ body{
 
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -105,7 +124,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -114,6 +133,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -134,17 +155,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -176,6 +190,162 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* ===== Glossary toolbar ===== */
+
+.toolbar{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.search{
+display:flex;
+align-items:center;
+gap:8px;
+font-size:16px;
+}
+
+.search input{
+flex:1;
+background:rgba(255,255,255,.06);
+border:1px solid var(--line);
+border-radius:8px;
+padding:8px 12px;
+color:var(--text);
+font-size:14px;
+font-family:inherit;
+outline:none;
+}
+.search input:focus{
+border-color:var(--gold2);
+box-shadow:0 0 0 2px rgba(214,163,74,.2);
+}
+.search input::placeholder{
+color:var(--muted);
+opacity:.7;
+}
+
+/* ===== Category chips ===== */
+
+.chips{
+display:flex;
+flex-wrap:wrap;
+gap:6px;
+}
+
+.chip{
+padding:5px 12px;
+border:1px solid var(--line);
+border-radius:999px;
+background:transparent;
+color:var(--muted);
+font-size:12px;
+font-weight:600;
+cursor:pointer;
+transition:background .15s ease, color .15s ease, border-color .15s ease;
+}
+.chip:hover{
+color:var(--gold2);
+border-color:var(--gold2);
+}
+.chip.active{
+background:rgba(214,163,74,.15);
+color:var(--gold2);
+border-color:var(--gold2);
+}
+
+/* ===== Letter index ===== */
+
+.index{
+font-size:14px;
+line-height:2;
+}
+.index a{
+margin:0 2px;
+}
+
+/* ===== Button row ===== */
+
+.btnrow{
+font-size:13px;
+color:var(--muted);
+}
+.btn{
+color:var(--gold2);
+font-weight:600;
+}
+.btn:hover{
+color:var(--gold);
+}
+
+/* ===== Glossary entries ===== */
+
+.glossary{
+margin-top:8px;
+}
+
+.entry{
+padding:4px 0;
+}
+
+.term{
+display:flex;
+flex-wrap:wrap;
+align-items:baseline;
+gap:8px;
+margin-bottom:4px;
+}
+
+.term h3{
+margin:0;
+font-size:17px;
+color:var(--gold2);
+}
+
+.meta{
+display:flex;
+flex-wrap:wrap;
+gap:4px;
+}
+
+.tagpill{
+display:inline-block;
+padding:2px 8px;
+border-radius:999px;
+background:rgba(214,163,74,.08);
+border:1px solid var(--line);
+font-size:10px;
+font-weight:700;
+color:var(--muted);
+text-transform:uppercase;
+letter-spacing:.04em;
+}
+.tagpill.key{
+background:rgba(214,163,74,.18);
+color:var(--gold2);
+border-color:rgba(214,163,74,.3);
+}
+
+.also{
+font-size:12px;
+color:var(--muted);
+margin-top:6px;
+}
+.also code{
+background:rgba(255,255,255,.06);
+padding:1px 5px;
+border-radius:4px;
+font-size:11px;
+}
+
+/* ===== Reduced motion ===== */
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+ .card{transition:none}
+ .chip{transition:none}
+}
+
 </style>
 </head>
 
@@ -193,7 +363,7 @@ margin:8px 0 0 18px
       Use the search box to filter instantly.
     </p>
 
-    <div class="card card--wm" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+    <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="toolbar">
         <div class="search" title="Search terms (instant filter)">
           🔎
@@ -217,16 +387,16 @@ margin:8px 0 0 18px
         Jump to letter:
       </div>
       <div class="index" style="margin-top:8px;">
-        <a href="#A">A</a> | <a href="#B">B</a> | <a href="#C">C</a> | <a href="#D">D</a> | 
-        <a href="#E">E</a> | <a href="#F">F</a> | <a href="#H">H</a> | <a href="#K">K</a> | 
-        <a href="#L">L</a> | <a href="#M">M</a> | <a href="#N">N</a> | <a href="#O">O</a> | 
-        <a href="#P">P</a> | <a href="#R">R</a> | <a href="#S">S</a> | <a href="#T">T</a> | 
+        <a href="#A">A</a> | <a href="#B">B</a> | <a href="#C">C</a> | <a href="#D">D</a> |
+        <a href="#E">E</a> | <a href="#F">F</a> | <a href="#H">H</a> | <a href="#K">K</a> |
+        <a href="#L">L</a> | <a href="#M">M</a> | <a href="#N">N</a> | <a href="#O">O</a> |
+        <a href="#P">P</a> | <a href="#R">R</a> | <a href="#S">S</a> | <a href="#T">T</a> |
         <a href="#U">U</a> | <a href="#W">W</a>
       </div>
 
       <div class="btnrow" style="margin-top:14px;">
-        <a class="btn" href="https://satoshium.info/education/bitcoin/what-is-bitcoin.html">← Back to: What is Bitcoin?</a> | 
-        <a class="btn" href="https://satoshium.info/education/bitcoin/history-origins.html">History & Origins</a> | 
+        <a class="btn" href="https://satoshium.info/education/bitcoin/what-is-bitcoin.html">← Back to: What is Bitcoin?</a> |
+        <a class="btn" href="https://satoshium.info/education/bitcoin/history-origins.html">History & Origins</a> |
         <a class="btn" href="https://satoshium.info/education/bitcoin/bitcoin-vs-fiat.html">Bitcoin vs Fiat</a>
       </div>
     </div>
@@ -244,7 +414,7 @@ margin:8px 0 0 18px
         <p>A string that looks like an account number, used to <strong>receive</strong> bitcoin. An address is derived from a public key (or script) and is safe to share.</p>
         <div class="also">Also see: <code>Public Key</code>, <code>Private Key</code>, <code>UTXO</code></div>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="transactions">
         <div class="term">
           <h3>Adoption</h3>
@@ -252,7 +422,7 @@ margin:8px 0 0 18px
         </div>
         <p>More people and institutions using Bitcoin to save, spend, settle payments, and run infrastructure (nodes, Lightning, etc.).</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="security wallets">
         <div class="term">
           <h3>Air-gapped</h3>
@@ -263,7 +433,7 @@ margin:8px 0 0 18px
     </section>
 
       <!-- B -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">      
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="B" data-tags="transactions wallets">
         <div class="term">
           <h3>Backup</h3>
@@ -272,7 +442,7 @@ margin:8px 0 0 18px
         <p>A way to recover your wallet if a device is lost. Usually your <strong>seed phrase</strong> (and sometimes a <strong>passphrase</strong>).</p>
         <div class="also">Also see: <code>Seed Phrase</code>, <code>Passphrase</code></div>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="basics">
         <div class="term">
           <h3>Bitcoin (BTC)</h3>
@@ -280,7 +450,7 @@ margin:8px 0 0 18px
         </div>
         <p>A decentralized digital monetary network with a fixed supply cap (21 million). BTC is the unit used to measure amounts on the network.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="basics">
         <div class="term">
           <h3>Block</h3>
@@ -288,7 +458,7 @@ margin:8px 0 0 18px
         </div>
         <p>A bundle of transactions added to the blockchain. Blocks are produced roughly every ~10 minutes on average.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="basics nodes transactions">
         <div class="term">
           <h3>Blockchain</h3>
@@ -296,7 +466,7 @@ margin:8px 0 0 18px
         </div>
         <p>The public ledger of Bitcoin transactions. Blocks link together in order, forming a history that nodes can verify.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="security">
         <div class="term">
           <h3>Bitcoin Improvement Proposal (BIP)</h3>
@@ -304,7 +474,7 @@ margin:8px 0 0 18px
         </div>
         <p>A standard way for developers and the community to propose changes or standards for Bitcoin (e.g., wallet formats, address types).</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="mining nodes">
         <div class="term">
           <h3>Block Reward</h3>
@@ -312,7 +482,7 @@ margin:8px 0 0 18px
         </div>
         <p>The bitcoin paid to miners for producing a valid block. It includes the <strong>block subsidy</strong> + transaction fees.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="mining">
         <div class="term">
           <h3>Block Subsidy</h3>
@@ -323,7 +493,7 @@ margin:8px 0 0 18px
       </section>
 
       <!-- C -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">   
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="C" data-tags="transactions security">
         <div class="term">
           <h3>Confirmation</h3>
@@ -331,7 +501,7 @@ margin:8px 0 0 18px
         </div>
         <p>When your transaction is included in a mined block, it has <strong>1 confirmation</strong>. Each new block added afterward increases confirmations, making reversal increasingly unlikely.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="basics markets">
         <div class="term">
           <h3>Custody</h3>
@@ -342,7 +512,7 @@ margin:8px 0 0 18px
       </section>
 
       <!-- D -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">   
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="D" data-tags="mining">
         <div class="term">
           <h3>Difficulty</h3>
@@ -350,7 +520,7 @@ margin:8px 0 0 18px
         </div>
         <p>A measure of how hard it is to find a valid block. Bitcoin adjusts difficulty about every 2016 blocks to keep block times near ~10 minutes.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="basics">
         <div class="term">
           <h3>Decentralization</h3>
@@ -361,7 +531,7 @@ margin:8px 0 0 18px
       </section>
 
       <!-- E -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">         
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="E" data-tags="basics markets">
         <div class="term">
           <h3>Exchange</h3>
@@ -372,7 +542,7 @@ margin:8px 0 0 18px
       </section>
 
       <!-- F -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">  
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="F" data-tags="security markets">
         <div class="term">
           <h3>Fiat</h3>
@@ -380,7 +550,7 @@ margin:8px 0 0 18px
         </div>
         <p>Government-issued currency (USD, EUR). Fiat supply can expand; its value is maintained by policy and demand.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="nodes mining">
         <div class="term">
           <h3>Fork (Soft Fork / Hard Fork)</h3>
@@ -391,7 +561,7 @@ margin:8px 0 0 18px
       </section>
 
       <!-- H -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">        
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="H" data-tags="mining">
         <div class="term">
           <h3>Halving</h3>
@@ -399,15 +569,15 @@ margin:8px 0 0 18px
         </div>
         <p>An event that cuts the block subsidy in half about every 210,000 blocks (~4 years), slowing new issuance until the cap is reached.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="mining">
         <div class="term">
           <h3>Hash</h3>
           <div class="meta"><span class="tagpill">Mining</span><span class="tagpill key">Key Term</span></div>
         </div>
-        <p>A “digital fingerprint” of data produced by a hash function (Bitcoin uses SHA-256). Small input changes produce a totally different output.</p>
+        <p>A "digital fingerprint" of data produced by a hash function (Bitcoin uses SHA-256). Small input changes produce a totally different output.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="mining">
         <div class="term">
           <h3>Hashrate</h3>
@@ -418,7 +588,7 @@ margin:8px 0 0 18px
       </section>
 
       <!-- K -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">   
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="K" data-tags="security wallets transactions">
         <div class="term">
           <h3>Key Pair (Public Key / Private Key)</h3>
@@ -426,18 +596,18 @@ margin:8px 0 0 18px
         </div>
         <p>A public key helps generate addresses. A private key proves ownership and authorizes spending. <strong>Never share your private key.</strong></p>
       </div>
-      </section>  
+      </section>
 
       <!-- L -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');"> 
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="L" data-tags="lightning">
         <div class="term">
           <h3>Lightning Network</h3>
           <div class="meta"><span class="tagpill">Lightning</span><span class="tagpill key">Key Term</span></div>
         </div>
-        <p>A layer-2 network for fast, low-fee bitcoin payments using payment channels. It still anchors to Bitcoin’s base layer for security.</p>
+        <p>A layer-2 network for fast, low-fee bitcoin payments using payment channels. It still anchors to Bitcoin's base layer for security.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="lightning">
         <div class="term">
           <h3>Lightning Channel</h3>
@@ -445,10 +615,10 @@ margin:8px 0 0 18px
         </div>
         <p>A two-party (or multi-path) payment channel funded by an on-chain transaction. Once open, payments can flow instantly off-chain.</p>
       </div>
-      </section>  
+      </section>
 
       <!-- M -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');"> 
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="M" data-tags="transactions nodes">
         <div class="term">
           <h3>Mempool</h3>
@@ -456,7 +626,7 @@ margin:8px 0 0 18px
         </div>
         <p>The waiting room for unconfirmed transactions. Miners typically prioritize transactions with higher fees per byte.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="mining">
         <div class="term">
           <h3>Mining</h3>
@@ -464,7 +634,7 @@ margin:8px 0 0 18px
         </div>
         <p>The process of using Proof-of-Work to add new blocks. Miners compete to find a valid block hash and earn the block reward.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="mining">
         <div class="term">
           <h3>Mining Pool</h3>
@@ -472,10 +642,10 @@ margin:8px 0 0 18px
         </div>
         <p>A group of miners who combine hashrate and share rewards more frequently. Payout methods vary (FPPS, PPS, PPLNS, etc.).</p>
       </div>
-      </section>  
+      </section>
 
       <!-- N -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');"> 
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="N" data-tags="nodes">
         <div class="term">
           <h3>Node (Full Node)</h3>
@@ -483,7 +653,7 @@ margin:8px 0 0 18px
         </div>
         <p>Software that verifies Bitcoin rules. A full node downloads/validates blocks and transactions and enforces the protocol without trusting anyone.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="nodes">
         <div class="term">
           <h3>Non-custodial</h3>
@@ -494,18 +664,18 @@ margin:8px 0 0 18px
       </section>
 
       <!-- O -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">    
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="O" data-tags="security wallets">
         <div class="term">
           <h3>Open-source</h3>
           <div class="meta"><span class="tagpill">Basics</span></div>
         </div>
-        <p>Software whose code is public and inspectable. Bitcoin’s transparency helps people verify how the system works.</p>
+        <p>Software whose code is public and inspectable. Bitcoin's transparency helps people verify how the system works.</p>
       </div>
       </section>
 
       <!-- P -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">   
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="P" data-tags="security wallets transactions">
         <div class="term">
           <h3>Passphrase</h3>
@@ -513,15 +683,15 @@ margin:8px 0 0 18px
         </div>
         <p>An optional extra word/phrase added to your seed phrase (BIP39) to create a new wallet. If used, losing it can make funds unrecoverable.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="security">
         <div class="term">
           <h3>Phishing</h3>
           <div class="meta"><span class="tagpill">Security</span></div>
         </div>
-        <p>Tricking you into revealing secrets (seed phrase, passwords). Never type your seed phrase into random sites or share it with “support.”</p>
+        <p>Tricking you into revealing secrets (seed phrase, passwords). Never type your seed phrase into random sites or share it with "support."</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="basics mining">
         <div class="term">
           <h3>Proof-of-Work (PoW)</h3>
@@ -532,7 +702,7 @@ margin:8px 0 0 18px
         </section>
 
       <!-- R -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">  
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="R" data-tags="security transactions">
         <div class="term">
           <h3>RBF (Replace-By-Fee)</h3>
@@ -540,7 +710,7 @@ margin:8px 0 0 18px
         </div>
         <p>A feature that lets a sender bump fees on an unconfirmed transaction by replacing it with a higher-fee version.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="security wallets">
         <div class="term">
           <h3>Recovery</h3>
@@ -551,7 +721,7 @@ margin:8px 0 0 18px
       </section>
 
       <!-- S -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">  
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="S" data-tags="basics wallets">
         <div class="term">
           <h3>Satoshis (sats)</h3>
@@ -559,7 +729,7 @@ margin:8px 0 0 18px
         </div>
         <p>The smallest bitcoin unit. <strong>1 BTC = 100,000,000 sats</strong>. Most everyday Lightning payments are measured in sats.</p>
       </div>
-<hr></hr>       
+<hr>
       <div class="entry" data-tags="security wallets">
         <div class="term">
           <h3>Seed Phrase (Recovery Phrase)</h3>
@@ -567,7 +737,7 @@ margin:8px 0 0 18px
         </div>
         <p>A list of 12–24 words that can recreate your wallet keys. Anyone with your seed phrase can spend your bitcoin—treat it like treasure.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="nodes">
         <div class="term">
           <h3>SegWit</h3>
@@ -578,7 +748,7 @@ margin:8px 0 0 18px
       </section>
 
       <!-- T -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">  
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" data-tags="nodes">
         <div class="term">
           <h3>Taproot</h3>
@@ -586,7 +756,7 @@ margin:8px 0 0 18px
         </div>
         <p>A major upgrade improving privacy and efficiency for certain scripts and multisig setups, and enabling more flexible smart-contract-like behavior.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" id="T" data-tags="transactions">
         <div class="term">
           <h3>Transaction (TX)</h3>
@@ -594,7 +764,7 @@ margin:8px 0 0 18px
         </div>
         <p>A signed message that moves bitcoin from one set of UTXOs to new UTXOs. It includes inputs, outputs, and fees.</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="transactions">
         <div class="term">
           <h3>Transaction Fee</h3>
@@ -605,19 +775,19 @@ margin:8px 0 0 18px
       </section>
 
       <!-- U -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">  
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="U" data-tags="transactions wallets nodes">
         <div class="term">
           <h3>UTXO (Unspent Transaction Output)</h3>
           <div class="meta"><span class="tagpill">Transactions</span><span class="tagpill key">Key Term</span></div>
         </div>
-        <p>The “chunks” of bitcoin in your wallet. Bitcoin doesn’t work like a bank balance; it works like spendable outputs you can combine and split.</p>
+        <p>The "chunks" of bitcoin in your wallet. Bitcoin doesn't work like a bank balance; it works like spendable outputs you can combine and split.</p>
         <div class="also">Also see: <code>Inputs</code>, <code>Outputs</code>, <code>Coin Control</code></div>
       </div>
       </section>
 
       <!-- W -->
-      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">       
+      <section class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <div class="entry" id="W" data-tags="wallets security">
         <div class="term">
           <h3>Wallet (Hot / Cold)</h3>
@@ -625,19 +795,19 @@ margin:8px 0 0 18px
         </div>
         <p>A tool for managing keys and signing transactions. <strong>Hot wallets</strong> are connected to the internet (convenient). <strong>Cold wallets</strong> keep keys offline (safer).</p>
       </div>
-<hr></hr>
+<hr>
       <div class="entry" data-tags="security">
         <div class="term">
           <h3>Whitepaper</h3>
           <div class="meta"><span class="tagpill">Basics</span></div>
         </div>
-        <p>The original 2008 paper “Bitcoin: A Peer-to-Peer Electronic Cash System” published by Satoshi Nakamoto.</p>
+        <p>The original 2008 paper "Bitcoin: A Peer-to-Peer Electronic Cash System" published by Satoshi Nakamoto.</p>
       </div>
       </section>
 
     </div>
 
-    <div class="card card--wm" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');" style="margin-top:18px;">
+    <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png'); margin-top:18px;">
       <h2 style="margin-top:0;">Safety Reminders (Bitcoin 101)</h2>
       <ul>
         <li><strong>Never share</strong> your seed phrase or private keys — not with anyone, not ever.</li>
@@ -650,10 +820,10 @@ margin:8px 0 0 18px
       </p>
     </div>
 
-    <div class="card card--wm" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
+    <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
       <h2 style="margin-top:0;">Want this glossary to grow?</h2>
       <p class="muted">
-        This is a strong Bitcoin 101 base. Next expansions (when you’re ready):
+        This is a strong Bitcoin 101 base. Next expansions (when you're ready):
       </p>
       <ul>
         <li>Address types: Legacy / SegWit / Taproot (with examples)</li>
@@ -663,8 +833,7 @@ margin:8px 0 0 18px
       </ul>
     </div>
 
-                <!-- Footer mission statement + links -->
-</main>                     
+</main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -673,6 +842,7 @@ margin:8px 0 0 18px
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
