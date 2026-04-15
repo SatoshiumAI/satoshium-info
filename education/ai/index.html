@@ -7,7 +7,28 @@
 <link rel="alternate icon" href="/assets/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
-<title>Artificial Intelligence — What It Is</title>
+<title>Artificial Intelligence — What It Is | Satoshium Knowledge Layer</title>
+<!-- TIER 3 — SEO: added meta description (was missing) -->
+<meta name="description" content="Artificial Intelligence explained — how AI systems learn, reason, and assist with complex tasks. Covers machine reasoning, AI agents, governance, and the role of decentralized trust within the Satoshium intelligence framework." />
+
+<!-- TIER 3 — SEO: Open Graph metadata -->
+<meta property="og:title" content="Artificial Intelligence — What It Is | Satoshium Knowledge Layer" />
+<meta property="og:description" content="Artificial Intelligence explained — how AI systems learn, reason, and assist with complex tasks. Covers machine reasoning, AI agents, governance, and the role of decentralized trust within the Satoshium intelligence framework." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://satoshium.info/education/ai/index.html" />
+<meta property="og:image" content="https://satoshium.link/assets/opengraph.jpg" />
+<meta property="og:site_name" content="Satoshium" />
+<meta property="og:locale" content="en_US" />
+
+<!-- TIER 3 — SEO: Twitter Card metadata -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Artificial Intelligence — What It Is | Satoshium Knowledge Layer" />
+<meta name="twitter:description" content="Artificial Intelligence explained — how AI systems learn, reason, and assist with complex tasks. Covers machine reasoning, AI agents, governance, and the role of decentralized trust within the Satoshium intelligence framework." />
+<meta name="twitter:image" content="https://satoshium.link/assets/opengraph.jpg" />
+<meta name="twitter:site" content="@SatoshiumAI" />
+
+<!-- TIER 3 — SEO: canonical URL -->
+<link rel="canonical" href="https://satoshium.info/education/ai/index.html" />
 
 <style>
 
@@ -63,6 +84,12 @@ body{
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
 
+/* TIER 3 — ACCESSIBILITY: visible focus ring for keyboard navigation */
+a:focus-visible{
+ outline:2px solid var(--gold2);
+ outline-offset:2px;
+}
+
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
  .wrap.content{
@@ -111,6 +138,7 @@ margin:22px 0
 
 /* ===== Cards ===== */
 
+/* TIER 3 — CSS: consolidated 3 duplicate .card blocks into one */
 .card{
 position: relative;
 overflow: hidden;
@@ -121,7 +149,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -130,6 +158,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -150,17 +180,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -182,21 +205,49 @@ font-size:12px;
 font-weight:700
 }
 
+/* TIER 3 — CSS: added missing .pill-link and .hero-actions rules (classes used in markup but undefined) */
+.pill-link{
+  display:inline-flex;
+  margin-right:8px;
+  margin-bottom:10px
+}
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px
+}
+
 ul{
 margin:8px 0 0 18px
 }
 
+/* TIER 3 — ACCESSIBILITY: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce){
+ .wrap.content{
+  animation:none;
+  opacity:1;
+  transform:none;
+ }
+ .card{
+  transition:none;
+ }
+}
+
 </style>
 </head>
+
+<!-- TIER 3 — HTML: added missing <body> tag (was absent between </head> and topbar) -->
+<body id="top" class="theme-ai">
 
 <div id="topbar-slot" data-topbar="platform"></div>
 <script src="/components/topbar-loader.js"></script>
 
 <main class="wrap content">
 
-<div class="pill">🤖 What is AI?</div>
+<div class="pill">&#x1F916; What is AI?</div>
 
-<h1 style="margin-top:12px;">Artificial Intelligence — What It Is?</h1>
+<h1 style="margin-top:12px;">Artificial Intelligence &#x2014; What It Is?</h1>
 
 <p class="muted">
 Artificial Intelligence (AI) is software designed to learn, reason,
@@ -206,14 +257,14 @@ identify patterns, and make decisions that previously required human judgment.
 
 <div class="card">
 
-<h2 style="margin-top:0;">🔎 The simple definition</h2>
+<h2 style="margin-top:0;">&#x1F50E; The simple definition</h2>
 
 <p>
 <b>Artificial Intelligence is software that can learn from data and use that learning to make decisions or generate outcomes.</b>
 </p>
 
 <p class="muted" style="margin-top:10px;">
-AI does not think like humans — it analyzes patterns and predicts outcomes
+AI does not think like humans &#x2014; it analyzes patterns and predicts outcomes
 based on large amounts of information.
 </p>
 
@@ -221,37 +272,36 @@ based on large amounts of information.
 
 <div class="card">
 
-<h2 style="margin-top:0;">⚙️ What AI can do</h2>
+<h2 style="margin-top:0;">&#x2699;&#xFE0F; What AI can do</h2>
 
 <ul>
-<li><b>Analyze information</b> — detect patterns in large datasets</li>
-<li><b>Generate content</b> — text, images, software, and ideas</li>
-<li><b>Assist decision making</b> — evaluate possibilities and outcomes</li>
-<li><b>Automate tasks</b> — perform work repeatedly and efficiently</li>
-
+<li><b>Analyze information</b> &#x2014; detect patterns in large datasets</li>
+<li><b>Generate content</b> &#x2014; text, images, software, and ideas</li>
+<li><b>Assist decision making</b> &#x2014; evaluate possibilities and outcomes</li>
+<li><b>Automate tasks</b> &#x2014; perform work repeatedly and efficiently</li>
 </ul>
 
 </div>
 
 <div class="card">
 
-<h2 style="margin-top:0;">🧠 How AI works (simplified)</h2>
+<h2 style="margin-top:0;">&#x1F9E0; How AI works (simplified)</h2>
 
 <ul>
-<li><b>Training</b> — models learn patterns from large datasets</li>
-<li><b>Inference</b> — the model uses what it learned to answer questions</li>
-<li><b>Feedback</b> — results improve through corrections and refinement</li>
-<li><b>Iteration</b> — systems evolve through continuous improvement</li>
+<li><b>Training</b> &#x2014; models learn patterns from large datasets</li>
+<li><b>Inference</b> &#x2014; the model uses what it learned to answer questions</li>
+<li><b>Feedback</b> &#x2014; results improve through corrections and refinement</li>
+<li><b>Iteration</b> &#x2014; systems evolve through continuous improvement</li>
 </ul>
 
 </div>
 
 <div class="card">
 
-<h2 style="margin-top:0;">🤖 AI Agents</h2>
+<h2 style="margin-top:0;">&#x1F916; AI Agents</h2>
 
 <p>
-Modern AI is moving toward <b>agents</b> — systems that can plan,
+Modern AI is moving toward <b>agents</b> &#x2014; systems that can plan,
 reason, and execute tasks autonomously.
 </p>
 
@@ -261,22 +311,23 @@ reason, and execute tasks autonomously.
 <li>decision-support systems</li>
 <li>automation agents</li>
 </ul>
-<p></p>
+
+<!-- TIER 3 — HTML: removed empty <p></p> tag -->
 <div class="hero-actions">
-<a class="pill pill-link" href="https://satoshium.info/education/ai/what-are-agents.html">Learn about A.I. Agents</a> 
+<a class="pill pill-link" href="https://satoshium.info/education/ai/what-are-agents.html">Learn about A.I. Agents</a>
 </div>
- 
+
 </div>
 
 <!-- Machine Reasoning Card -->
 <div class="card">
   <div class="card-header">
-   <h2 style="margin-top:0;">🧠 What is Machine Reasoning?</h2>
+   <h2 style="margin-top:0;">&#x1F9E0; What is Machine Reasoning?</h2>
   </div>
 
   <p>
     Machine reasoning is the ability of software to work through information step-by-step,
-    compare evidence, apply rules, and reach structured conclusions.  
+    compare evidence, apply rules, and reach structured conclusions.
     It moves beyond simple prediction toward disciplined decision-making.
   </p>
 
@@ -287,31 +338,34 @@ reason, and execute tasks autonomously.
     <li>Choose the best next action</li>
   </ul>
 
-<p></p>
+<!-- TIER 3 — HTML: removed empty <p></p> tag -->
 <div class="hero-actions">
-<a class="pill pill-link" href="https://satoshium.info/education/ai/machine-reasoning.html">Learn about Machine Reasoning</a> 
+<a class="pill pill-link" href="https://satoshium.info/education/ai/machine-reasoning.html">Learn about Machine Reasoning</a>
 </div>
 </div>
- 
-<div class="card">
-  <h2 style="margin-top:0;">⚖️ Why governance matters</h2>
 
+<div class="card">
+  <h2 style="margin-top:0;">&#x2696;&#xFE0F; Why governance matters</h2>
+
+  <!-- TIER 3 — HTML: closed unclosed <p> tag (was missing </p> before empty <p></p>) -->
   <p>
     As AI systems grow more powerful, they need clear rules, accountability,
     and transparent oversight. Governance helps ensure intelligence remains
     trustworthy, reviewable, and aligned with shared standards.
-<p></p>
+  </p>
+
+<!-- TIER 3 — HTML: removed empty <p></p> tag -->
 <div class="hero-actions">
-<a class="pill pill-link" href="https://satoshium.info/education/ai/why-governance-matters.html">Learn why Governance matters</a> 
+<a class="pill pill-link" href="https://satoshium.info/education/ai/why-governance-matters.html">Learn why Governance matters</a>
 </div>
 </div>
 
 <div class="card">
 
-<h2 style="margin-top:0;">🧭 Why Satoshium exists</h2>
+<h2 style="margin-top:0;">&#x1F9ED; Why Satoshium exists</h2>
 
 <p>
-Artificial intelligence creates enormous capability — but capability without
+Artificial intelligence creates enormous capability &#x2014; but capability without
 trust can become dangerous.
 </p>
 
@@ -322,17 +376,18 @@ operate within transparent, auditable frameworks.
 </p>
 
 <p class="muted">
-The goal is not to restrict intelligence — but to make it trustworthy.
+The goal is not to restrict intelligence &#x2014; but to make it trustworthy.
 </p>
-<p></p>
+
+<!-- TIER 3 — HTML: removed empty <p></p> tag -->
 <div class="hero-actions">
-<a class="pill pill-link" href="https://satoshium.ai/start-here/origins.html">Read Satoshium's Origin Story</a> 
+<a class="pill pill-link" href="https://satoshium.ai/start-here/origins.html">Read Satoshium's Origin Story</a>
 </div>
 </div>
 
 <!-- Footer mission statement -->
 
-</main>                     
+</main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -341,6 +396,7 @@ The goal is not to restrict intelligence — but to make it trustworthy.
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
