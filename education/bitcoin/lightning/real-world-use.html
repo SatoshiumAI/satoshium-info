@@ -7,8 +7,25 @@
 <link rel="alternate icon" href="/assets/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
-<title>Real-world use • Satoshium</title>
+<title>Real-world use | Satoshium</title>
 <meta name="description" content="Real-world use explains how Bitcoin and Lightning are used globally today for payments, savings, remittances, and financial independence.">
+<link rel="canonical" href="https://satoshium.info/education/bitcoin/real-world-use.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Real-world use | Satoshium">
+<meta property="og:description" content="Real-world use explains how Bitcoin and Lightning are used globally today for payments, savings, remittances, and financial independence.">
+<meta property="og:url" content="https://satoshium.info/education/bitcoin/real-world-use.html">
+<meta property="og:image" content="https://satoshium.link/assets/btc-seal.png">
+<meta property="og:site_name" content="Satoshium">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Real-world use | Satoshium">
+<meta name="twitter:description" content="Real-world use explains how Bitcoin and Lightning are used globally today for payments, savings, remittances, and financial independence.">
+<meta name="twitter:image" content="https://satoshium.link/assets/btc-seal.png">
+<meta name="twitter:site" content="@SatoshiumAI">
 
 <style>
 
@@ -44,8 +61,10 @@ body{
  margin-bottom:40px;
  color:var(--muted);
 }
+
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -106,7 +125,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -115,6 +134,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -135,17 +156,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -177,6 +191,48 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* ===== Rich markup ===== */
+
+.small{font-size:14px;line-height:1.6}
+
+.kicker{
+font-size:11px;
+text-transform:uppercase;
+letter-spacing:.08em;
+color:var(--muted);
+margin-bottom:2px;
+}
+
+.toc{
+padding-left:20px;
+margin:10px 0 0;
+}
+.toc li{margin-bottom:6px}
+
+.quote{
+border-left:3px solid var(--gold);
+padding:8px 12px;
+margin:14px 0 0;
+color:var(--muted);
+font-style:italic;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+@media(max-width:760px){
+.grid{grid-template-columns:1fr}
+}
+
+/* ===== Reduced motion ===== */
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+ .card{transition:none}
+}
+
 </style>
 </head>
 
@@ -191,12 +247,12 @@ margin:8px 0 0 18px
 <h1>Real-world use</h1>
 
 <p class="small">
-Bitcoin is not theory anymore. It’s used globally every day for payments, savings, remittances, and financial independence. This page shows how Bitcoin and Lightning are actually used in the real world — right now.
+Bitcoin is not theory anymore. It's used globally every day for payments, savings, remittances, and financial independence. This page shows how Bitcoin and Lightning are actually used in the real world — right now.
 </p>
 
 <div class="grid">
   <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
-    <div class="kicker">What you’ll learn</div>
+    <div class="kicker">What you'll learn</div>
     <h2 style="margin-top:6px;">💡 Practical understanding</h2>
     <ul class="small">
       <li>Where Bitcoin is used daily</li>
@@ -205,7 +261,7 @@ Bitcoin is not theory anymore. It’s used globally every day for payments, savi
       <li>What adoption actually looks like on the ground</li>
     </ul>
     <div class="quote small">
-      Satoshium lens: Adoption doesn’t happen in headlines — it happens quietly in everyday life.
+      Satoshium lens: Adoption doesn't happen in headlines — it happens quietly in everyday life.
     </div>
   </div>
 
@@ -239,7 +295,7 @@ With Lightning, Bitcoin can be used for instant payments worldwide. Coffee, groc
 <li>Works across borders</li>
 </ul>
 <div class="quote small">
-Bitcoin becomes most powerful when it’s spendable — not just held.
+Bitcoin becomes most powerful when it's spendable — not just held.
 </div>
 </section>
 
@@ -256,7 +312,7 @@ Millions of people send money across borders to family. Traditional systems can 
 <li>Accessible with only a phone</li>
 </ul>
 <div class="quote small">
-For many families, Bitcoin isn’t speculation — it’s survival infrastructure.
+For many families, Bitcoin isn't speculation — it's survival infrastructure.
 </div>
 </section>
 
@@ -363,7 +419,7 @@ Real adoption rarely trends on social media — it grows quietly, then suddenly.
 </div>
 </section>
 
-</main>                     
+</main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -372,6 +428,7 @@ Real adoption rarely trends on social media — it grows quietly, then suddenly.
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
