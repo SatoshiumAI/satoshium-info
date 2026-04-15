@@ -8,6 +8,24 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
 <title>Proof-of-Work | Satoshium</title>
+<meta name="description" content="Proof-of-work is the engine that secures Bitcoin. Learn how real-world energy becomes digital security, why it exists, and what it means for the future.">
+<link rel="canonical" href="https://satoshium.info/education/bitcoin/proof-of-work.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Proof-of-Work | Satoshium">
+<meta property="og:description" content="Proof-of-work is the engine that secures Bitcoin. Learn how real-world energy becomes digital security, why it exists, and what it means for the future.">
+<meta property="og:url" content="https://satoshium.info/education/bitcoin/proof-of-work.html">
+<meta property="og:image" content="https://satoshium.link/assets/btc-seal.png">
+<meta property="og:site_name" content="Satoshium">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Proof-of-Work | Satoshium">
+<meta name="twitter:description" content="Proof-of-work is the engine that secures Bitcoin. Learn how real-world energy becomes digital security, why it exists, and what it means for the future.">
+<meta name="twitter:image" content="https://satoshium.link/assets/btc-seal.png">
+<meta name="twitter:site" content="@SatoshiumAI">
 
 <style>
 
@@ -46,6 +64,7 @@ body{
 
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -105,7 +124,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -114,6 +133,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -134,17 +155,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -176,6 +190,31 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* ===== Rich markup ===== */
+
+.subtitle{font-size:16px;line-height:1.6;color:var(--text)}
+
+.kicker{
+font-size:11px;
+text-transform:uppercase;
+letter-spacing:.08em;
+color:var(--muted);
+margin-bottom:2px;
+}
+
+.toc{
+padding-left:20px;
+margin:10px 0 0;
+}
+.toc li{margin-bottom:6px}
+
+/* ===== Reduced motion ===== */
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+ .card{transition:none}
+}
+
 </style>
 </head>
 
@@ -183,7 +222,7 @@ margin:8px 0 0 18px
 
 <div id="topbar-slot" data-topbar="platform"></div>
 <script src="/components/topbar-loader.js"></script>
- 
+
   <main class="wrap content">
     <div class="pill">⛏️ Mining & Network</div>
 <div class="container">
@@ -222,7 +261,7 @@ Proof-of-work is how Bitcoin decides who gets to add the next block to the block
 </p>
 
 <p>
-Miners around the world compete by using computing power and electricity to solve a mathematical puzzle.  
+Miners around the world compete by using computing power and electricity to solve a mathematical puzzle.
 The first one to solve it earns the right to add the next block and receive bitcoin as a reward.
 </p>
 
@@ -258,7 +297,7 @@ Satoshi Nakamoto solved this by creating a system where:
 </ul>
 
 <p>
-Proof-of-work removes the need to trust a central party.  
+Proof-of-work removes the need to trust a central party.
 Instead, the network trusts physics, math, and open verification.
 </p>
 </div>
@@ -329,7 +368,7 @@ That energy is what makes the system difficult to attack and independent of cont
 </ul>
 
 <p>
-The real question is not “does it use energy?”  
+The real question is not "does it use energy?"
 It is:
 </p>
 
@@ -341,16 +380,16 @@ It is:
 <div class="kicker">Common confusion</div>
 <h2>6) Common misunderstandings</h2>
 
-<p><strong>“Mining creates bitcoin from nothing”</strong><br>
+<p><strong>"Mining creates bitcoin from nothing"</strong><br>
 Mining secures the network. New bitcoin is issued as a reward for that security.</p>
 
-<p><strong>“Mining wastes energy”</strong><br>
+<p><strong>"Mining wastes energy"</strong><br>
 Energy secures the system. Without cost, the network could be easily attacked.</p>
 
-<p><strong>“Bitcoin can be hacked”</strong><br>
-To hack Bitcoin’s ledger would require enormous global energy and hardware dominance.</p>
+<p><strong>"Bitcoin can be hacked"</strong><br>
+To hack Bitcoin's ledger would require enormous global energy and hardware dominance.</p>
 
-<p><strong>“One company controls mining”</strong><br>
+<p><strong>"One company controls mining"</strong><br>
 Mining is globally distributed across many countries and operators.</p>
 </div>
 
@@ -376,7 +415,7 @@ As AI, automation, and digital systems grow:
 </ul>
 
 <p>
-Bitcoin uses proof-of-work to secure money.  
+Bitcoin uses proof-of-work to secure money.
 Future systems may use similar models to secure truth, identity, and intelligence.
 </p>
 </div>
@@ -399,7 +438,8 @@ Yes. Anyone can join the network, though large-scale mining requires specialized
 To secure the network and maintain a trustworthy global ledger.</p>
 </div>
 
-</main>                     
+</div>
+</main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -408,6 +448,7 @@ To secure the network and maintain a trustworthy global ledger.</p>
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
