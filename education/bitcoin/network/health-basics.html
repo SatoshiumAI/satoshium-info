@@ -7,15 +7,32 @@
 <link rel="alternate icon" href="/assets/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
-<title>Network health basics • Satoshium</title>
+<title>Network health basics | Satoshium</title>
 <meta name="description" content="Network health basics explains the signals that show Bitcoin is running normally: block timing, difficulty, mempool, fees, confirmations, and decentralization.">
+<link rel="canonical" href="https://satoshium.info/education/bitcoin/health-basics.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Network health basics | Satoshium">
+<meta property="og:description" content="Network health basics explains the signals that show Bitcoin is running normally: block timing, difficulty, mempool, fees, confirmations, and decentralization.">
+<meta property="og:url" content="https://satoshium.info/education/bitcoin/health-basics.html">
+<meta property="og:image" content="https://satoshium.link/assets/btc-seal.png">
+<meta property="og:site_name" content="Satoshium">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Network health basics | Satoshium">
+<meta name="twitter:description" content="Network health basics explains the signals that show Bitcoin is running normally: block timing, difficulty, mempool, fees, confirmations, and decentralization.">
+<meta name="twitter:image" content="https://satoshium.link/assets/btc-seal.png">
+<meta name="twitter:site" content="@SatoshiumAI">
 
 <style>
 
 /* ===== Core Theme ===== */
 
 :root{
- --card-wm: url('https://satoshium.link/assets/seal.png');
+ --card-wm: url('https://satoshium.link/assets/btc-seal.png');
  --bg:#07090d;
  --panel:#0c1018;
  --text:#e8edf7;
@@ -47,6 +64,7 @@ body{
 
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -106,7 +124,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -115,6 +133,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -135,17 +155,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -177,6 +190,48 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* ===== Rich markup ===== */
+
+.small{font-size:14px;line-height:1.6}
+
+.kicker{
+font-size:11px;
+text-transform:uppercase;
+letter-spacing:.08em;
+color:var(--muted);
+margin-bottom:2px;
+}
+
+.toc{
+padding-left:20px;
+margin:10px 0 0;
+}
+.toc li{margin-bottom:6px}
+
+.quote{
+border-left:3px solid var(--gold);
+padding:8px 12px;
+margin:14px 0 0;
+color:var(--muted);
+font-style:italic;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+@media(max-width:760px){
+.grid{grid-template-columns:1fr}
+}
+
+/* ===== Reduced motion ===== */
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+ .card{transition:none}
+}
+
 </style>
 </head>
 
@@ -191,16 +246,16 @@ margin:8px 0 0 18px
   <h1>Network health basics</h1>
 
   <p class="small">
-    “Network health” means: is Bitcoin operating normally right now? This page shows the core signals that tell you the network is stable,
+    "Network health" means: is Bitcoin operating normally right now? This page shows the core signals that tell you the network is stable,
     secure, and processing transactions as expected — without hype and without guesswork.
   </p>
 
   <div class="grid">
     <div class="card" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
-      <div class="kicker">What you’ll learn</div>
+      <div class="kicker">What you'll learn</div>
       <h2 style="margin-top:6px;">✅ The core health signals</h2>
       <ul class="small">
-        <li>What “healthy” looks like (most days)</li>
+        <li>What "healthy" looks like (most days)</li>
         <li>What the mempool tells you</li>
         <li>How to think about fees and confirmations</li>
         <li>What to watch during major events</li>
@@ -220,7 +275,7 @@ margin:8px 0 0 18px
         <li><a href="#hashrate">3) Hashrate & difficulty (health vs headlines)</a></li>
         <li><a href="#mempool">4) Mempool basics</a></li>
         <li><a href="#fees">5) Fees: why they rise and fall</a></li>
-        <li><a href="#confirmations">6) Confirmations: what “final” really means</a></li>
+        <li><a href="#confirmations">6) Confirmations: what "final" really means</a></li>
         <li><a href="#nodes">7) Nodes, decentralization & rule enforcement</a></li>
         <li><a href="#events">8) What to watch during major events</a></li>
         <li><a href="#checklist">9) A simple health checklist</a></li>
@@ -233,7 +288,7 @@ margin:8px 0 0 18px
     <div class="kicker">1) The point</div>
     <h2>The 60-second overview</h2>
     <p class="small">
-      Bitcoin’s health can be summarized with a few questions:
+      Bitcoin's health can be summarized with a few questions:
     </p>
     <ul class="small">
       <li>Are blocks being produced (roughly every ~10 minutes over time)?</li>
@@ -242,7 +297,7 @@ margin:8px 0 0 18px
       <li>Are nodes enforcing the same rules (consensus intact)?</li>
     </ul>
     <div class="quote small">
-      Healthy doesn’t mean “cheap fees” every day. Healthy means the system is functioning and adapting.
+      Healthy doesn't mean "cheap fees" every day. Healthy means the system is functioning and adapting.
     </div>
   </section>
 
@@ -276,7 +331,7 @@ margin:8px 0 0 18px
       <li>Sudden drops can happen during shocks — the protocol adapts.</li>
     </ul>
     <div class="quote small">
-      Satoshium rule: don’t confuse “a metric moved” with “the system is failing.”
+      Satoshium rule: don't confuse "a metric moved" with "the system is failing."
     </div>
   </section>
 
@@ -284,7 +339,7 @@ margin:8px 0 0 18px
     <div class="kicker">4) The waiting room</div>
     <h2>Mempool basics</h2>
     <p class="small">
-      The mempool is Bitcoin’s “waiting room” — transactions that have been broadcast but not yet included in a block.
+      The mempool is Bitcoin's "waiting room" — transactions that have been broadcast but not yet included in a block.
       When demand is high, the mempool grows. When demand is low, it clears.
     </p>
     <ul class="small">
@@ -293,7 +348,7 @@ margin:8px 0 0 18px
       <li>Mempool congestion is normal during high activity</li>
     </ul>
     <div class="quote small">
-      The mempool is a demand indicator, not a “network broke” indicator.
+      The mempool is a demand indicator, not a "network broke" indicator.
     </div>
   </section>
 
@@ -310,20 +365,20 @@ margin:8px 0 0 18px
       <li>Fees are a market — not a fixed price</li>
     </ul>
     <div class="quote small">
-      Fees are how Bitcoin stays neutral. No one gets “special access” without paying the same market price.
+      Fees are how Bitcoin stays neutral. No one gets "special access" without paying the same market price.
     </div>
   </section>
 
   <section class="card" id="confirmations" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
     <div class="kicker">6) Settlement depth</div>
-    <h2>Confirmations: what “final” really means</h2>
+    <h2>Confirmations: what "final" really means</h2>
     <p class="small">
-      A confirmation means your transaction is included in a block. More confirmations means it’s buried deeper under proof-of-work,
+      A confirmation means your transaction is included in a block. More confirmations means it's buried deeper under proof-of-work,
       making it increasingly impractical to reverse.
     </p>
     <ul class="small">
       <li>1 confirmation: included on-chain</li>
-      <li>3–6 confirmations: commonly treated as “very safe” for large payments</li>
+      <li>3–6 confirmations: commonly treated as "very safe" for large payments</li>
       <li>More confirmations = more cumulative proof-of-work behind it</li>
     </ul>
     <div class="quote small">
@@ -344,7 +399,7 @@ margin:8px 0 0 18px
       <li>Decentralization reduces single points of failure</li>
     </ul>
     <div class="quote small">
-      Satoshium lens: decentralization is not a slogan — it’s how rules survive pressure.
+      Satoshium lens: decentralization is not a slogan — it's how rules survive pressure.
     </div>
   </section>
 
@@ -352,8 +407,8 @@ margin:8px 0 0 18px
     <div class="kicker">8) Stress tests</div>
     <h2>What to watch during major events</h2>
     <p class="small">
-      During major news, price shocks, or large “on-chain moments,” the mempool and fees may spike.
-      That’s normal. Here’s what matters:
+      During major news, price shocks, or large "on-chain moments," the mempool and fees may spike.
+      That's normal. Here's what matters:
     </p>
     <ul class="small">
       <li>Blocks continue arriving over time</li>
@@ -362,20 +417,20 @@ margin:8px 0 0 18px
       <li>Congestion clears eventually</li>
     </ul>
     <div class="quote small">
-      Bitcoin’s true strength shows up during chaos — when systems that rely on trust often break.
+      Bitcoin's true strength shows up during chaos — when systems that rely on trust often break.
     </div>
   </section>
 
   <section class="card" id="checklist" style="--card-wm:url('https://satoshium.link/assets/btc-seal.png');">
     <div class="kicker">9) Practical</div>
     <h2>A simple health checklist</h2>
-    <p class="small">If you want a quick “is Bitcoin okay?” routine, use this:</p>
+    <p class="small">If you want a quick "is Bitcoin okay?" routine, use this:</p>
     <ul class="small">
       <li><strong>Blocks:</strong> Are blocks being mined today? (Yes = alive)</li>
       <li><strong>Mempool:</strong> Is it growing or clearing? (Either can be normal)</li>
       <li><strong>Fees:</strong> Are fees unusually high? (Means demand is high)</li>
       <li><strong>Hashrate:</strong> Any extreme changes? (Short-term shocks happen)</li>
-      <li><strong>Consensus:</strong> Any credible reports of a chain split? (Very rare; that’s the real alarm)</li>
+      <li><strong>Consensus:</strong> Any credible reports of a chain split? (Very rare; that's the real alarm)</li>
     </ul>
     <div class="quote small">
       Most days the answer is boring: Bitcoin is fine.
@@ -390,15 +445,15 @@ margin:8px 0 0 18px
       Not automatically. It usually means demand is high. Fees rise, and the backlog clears over time.
     </p>
 
-    <p class="small"><strong>Are high fees “Bitcoin failing”?</strong><br>
+    <p class="small"><strong>Are high fees "Bitcoin failing"?</strong><br>
       No. High fees are the market signaling that block space is scarce at that moment.
     </p>
 
-    <p class="small"><strong>What’s the biggest red flag?</strong><br>
+    <p class="small"><strong>What's the biggest red flag?</strong><br>
       A credible consensus split or widespread inability to produce blocks over a long period (rare).
     </p>
 
-    <p class="small"><strong>What’s the most common misunderstanding?</strong><br>
+    <p class="small"><strong>What's the most common misunderstanding?</strong><br>
       Confusing temporary congestion with systemic failure.
     </p>
 
@@ -407,7 +462,7 @@ margin:8px 0 0 18px
     </div>
   </section>
 
-</main>                     
+</main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -416,6 +471,7 @@ margin:8px 0 0 18px
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
