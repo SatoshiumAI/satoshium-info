@@ -7,9 +7,30 @@
 <link rel="alternate icon" href="https://satoshium.info/assets/favicon.ico">
 <link rel="apple-touch-icon" href="https://satoshium.info/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
+<title>Debug — Workspace | Satoshium</title>
+<meta name="description" content="Centralized troubleshooting workspace for the Satoshium ecosystem — organizing layout issues, asset path checks, CSS problems, and visual debugging during active development.">
+<link rel="canonical" href="https://satoshium.info/workspace/debug/">
 
-<title>Satoshium — Debug Workspace</title>
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Debug — Workspace | Satoshium">
+<meta property="og:description" content="Centralized troubleshooting workspace for the Satoshium ecosystem — organizing layout issues, asset path checks, CSS problems, and visual debugging during active development.">
+<meta property="og:url" content="https://satoshium.info/workspace/debug/">
+<meta property="og:image" content="https://satoshium.link/assets/seal.png">
+<meta property="og:site_name" content="Satoshium">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Debug — Workspace | Satoshium">
+<meta name="twitter:description" content="Centralized troubleshooting workspace for the Satoshium ecosystem — organizing layout issues, asset path checks, CSS problems, and visual debugging during active development.">
+<meta name="twitter:image" content="https://satoshium.link/assets/seal.png">
+<meta name="twitter:site" content="@SatoshiumAI">
+
 <style>
+
+/* ===== Core Theme ===== */
+
 :root{
  --card-wm: url('https://satoshium.link/assets/seal.png');
  --bg:#07090d;
@@ -20,23 +41,22 @@
  --gold2:#f4c36a;
  --line:rgba(214,163,74,.18);
 }
+
 *{box-sizing:border-box}
+
 html,body{
   margin:0;padding:0;background:var(--bg);color:var(--text);
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55
 }
+
 body{
  padding-top:80px;
 }
 
-.reflection{
- margin-top:40px;
- margin-bottom:40px;
- color:var(--muted);
-}
-
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
+
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
 .wrap.content{
@@ -51,46 +71,64 @@ a:hover{color:var(--gold)}
  transform:translateY(0);
  }
 }
- 
+
+/* ===== Layout ===== */
+
 .content{padding:34px 18px 60px}
+
+.reflection{
+ margin-top:40px;
+ margin-bottom:40px;
+ color:var(--muted);
+}
+
 h1,h2,h3{margin:0 0 10px}
 h1{font-size:30px;color:var(--gold2)}
 h2{font-size:20px;color:var(--gold2);margin-top:0}
 h3{font-size:15px;color:var(--text)}
 p,li{color:var(--text)}
 hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+
+/* ===== Cards ===== */
+
 .card{
   position:relative;overflow:hidden;
   background:linear-gradient(to bottom right,rgba(12,16,24,.94),rgba(12,16,24,.88));
-  border:1px solid var(--line);border-radius:16px;padding:16px 16px;margin:16px 0;
+  border:1px solid rgba(214,163,74,.15);
+  border-radius:16px;padding:16px 16px;margin:16px 0;
   box-shadow:0 0 0 1px rgba(214,163,74,.08),0 20px 50px rgba(0,0,0,.45);
+  transition:transform .18s ease, box-shadow .18s ease;
 }
+
 .card::before{
   content:"";position:absolute;inset:-60px;background-image:var(--card-wm);background-repeat:no-repeat;
   background-size:min(720px,70vw);background-position:right -140px center;opacity:0.028;filter:blur(1px);
   pointer-events:none;z-index:0;
 }
+
 .card > *{position:relative;z-index:1}
-.card{
-  transition: transform .18s ease, box-shadow .18s ease;
-}
+
 .card:hover{
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
 }
-.card{
-  border: 1px solid rgba(214,163,74,.15);
-}
+
+/* ===== Components ===== */
+
 .muted{color:var(--muted)}
+
 .pill{
   display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);
   border-radius:999px;background:rgba(214,163,74,.08);color:var(--gold2);font-size:12px;font-weight:700
 }
+
 .pill-link{display:inline-flex;margin-right:8px;margin-bottom:10px}
+
 ul{margin:8px 0 0 18px}
+
 .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.mini{font-size:13px}
 
 .note{
   margin-top:10px;
@@ -102,9 +140,19 @@ ul{margin:8px 0 0 18px}
   font-size:14px;
 }
 
+/* ===== Responsive ===== */
+
 @media (max-width:760px){
   .grid-2{grid-template-columns:1fr}
 }
+
+/* ===== Reduced motion ===== */
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+ .card{transition:none}
+}
+
 </style>
 </head>
 <body id="top">
@@ -182,6 +230,7 @@ Use this page as the central drop zone for debugging website pages, interface be
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
