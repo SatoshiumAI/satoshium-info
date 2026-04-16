@@ -7,9 +7,30 @@
 <link rel="alternate icon" href="https://satoshium.info/assets/favicon.ico">
 <link rel="apple-touch-icon" href="https://satoshium.info/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
+<title>Architecture — Workspace | Satoshium</title>
+<meta name="description" content="Map the systems-level structure of the Satoshium ecosystem — domains, repositories, interfaces, agents, and supporting infrastructure documented for long-horizon architectural discipline.">
+<link rel="canonical" href="https://satoshium.info/workspace/architecture/">
 
-<title>Satoshium — Architecture</title>
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Architecture — Workspace | Satoshium">
+<meta property="og:description" content="Map the systems-level structure of the Satoshium ecosystem — domains, repositories, interfaces, agents, and supporting infrastructure documented for long-horizon architectural discipline.">
+<meta property="og:url" content="https://satoshium.info/workspace/architecture/">
+<meta property="og:image" content="https://satoshium.link/assets/seal.png">
+<meta property="og:site_name" content="Satoshium">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Architecture — Workspace | Satoshium">
+<meta name="twitter:description" content="Map the systems-level structure of the Satoshium ecosystem — domains, repositories, interfaces, agents, and supporting infrastructure documented for long-horizon architectural discipline.">
+<meta name="twitter:image" content="https://satoshium.link/assets/seal.png">
+<meta name="twitter:site" content="@SatoshiumAI">
+
 <style>
+
+/* ===== Core Theme ===== */
+
 :root{
  --card-wm: url('https://satoshium.link/assets/seal.png');
  --bg:#07090d;
@@ -20,26 +41,25 @@
  --gold2:#f4c36a;
  --line:rgba(214,163,74,.18);
 }
+
 *{box-sizing:border-box}
+
 html,body{
   margin:0;padding:0;background:var(--bg);color:var(--text);
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55
 }
+
 body{
  padding-top:80px;
 }
 
-.reflection{
- margin-top:40px;
- margin-bottom:40px;
- color:var(--muted);
-}
-
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
+
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
- .wrap.content{
+.wrap.content{
   opacity:0;
   transform:translateY(6px);
   animation:pageEnter .28s cubic-bezier(.22,.61,.36,1) forwards;
@@ -52,7 +72,16 @@ a:hover{color:var(--gold)}
  }
 }
 
+/* ===== Layout ===== */
+
 .content{padding:34px 18px 60px}
+
+.reflection{
+ margin-top:40px;
+ margin-bottom:40px;
+ color:var(--muted);
+}
+
 h1,h2,h3{margin:0 0 10px}
 h1{font-size:30px;color:var(--gold2)}
 h2{font-size:20px;color:var(--gold2);margin-top:0}
@@ -60,11 +89,15 @@ h3{font-size:15px;color:var(--text)}
 p,li{color:var(--text)}
 hr{border:none;border-top:1px solid var(--line);margin:22px 0}
 
+/* ===== Cards ===== */
+
 .card{
   position:relative;overflow:hidden;
   background:linear-gradient(to bottom right,rgba(12,16,24,.94),rgba(12,16,24,.88));
-  border:1px solid var(--line);border-radius:16px;padding:16px 16px;margin:16px 0;
+  border:1px solid rgba(214,163,74,.15);
+  border-radius:16px;padding:16px 16px;margin:16px 0;
   box-shadow:0 0 0 1px rgba(214,163,74,.08),0 20px 50px rgba(0,0,0,.45);
+  transition:transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -78,22 +111,12 @@ hr{border:none;border-top:1px solid var(--line);margin:22px 0}
 
 .card > *{position:relative;z-index:1}
 
-.card{
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-
 .card:hover{
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
 }
 
-.card{
-  border: 1px solid rgba(214,163,74,.15);
-}
- 
-.span-2{
-  grid-column: 1 / -1;
-}
+/* ===== Components ===== */
 
 .muted{color:var(--muted)}
 
@@ -124,9 +147,19 @@ ul{margin:8px 0 0 18px}
  font-size:14px;
 }
 
+/* ===== Responsive ===== */
+
 @media (max-width:760px){
   .grid-2{grid-template-columns:1fr}
 }
+
+/* ===== Reduced motion ===== */
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+ .card{transition:none}
+}
+
 </style>
 </head>
 
@@ -187,7 +220,7 @@ and supporting infrastructure connect within the broader Satoshium vision.
   <h2>Suggested Architecture Workflow</h2>
   <ul>
     <li>Map major systems before adding complexity.</li>
-    <li>Keep each layer’s purpose clearly defined.</li>
+    <li>Keep each layer's purpose clearly defined.</li>
     <li>Document changes when domains, repos, or system roles evolve.</li>
     <li>Use diagrams and notes to preserve long-term architectural discipline.</li>
   </ul>
@@ -224,6 +257,8 @@ Satoshium is being built slowly, in public, and with architectural discipline.
 
 <div id="footer-container"></div>
 
+</div>
+
 <script src="https://satoshium.link/assets/sayings.js"></script>
 
 <script>
@@ -233,8 +268,6 @@ fetch("https://satoshium.link/components/footer.html")
  document.getElementById("footer-container").innerHTML = data;
  });
 </script>
-
-</div>
 
 </body>
 </html>
