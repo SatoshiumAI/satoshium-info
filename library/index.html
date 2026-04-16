@@ -7,8 +7,25 @@
   <link rel="alternate icon" href="https://satoshium.info/assets/favicon.ico">
   <link rel="apple-touch-icon" href="https://satoshium.info/assets/apple-touch-icon.png">
   <meta name="theme-color" content="#4da3ff">
+  <title>Library — Knowledge Archive | Satoshium</title>
+  <meta name="description" content="The Satoshium knowledge archive — a growing public collection of videos, essays, papers, whitepapers, and research documenting decentralized intelligence built on the Bitcoin standard.">
+  <link rel="canonical" href="https://satoshium.info/library/">
 
-  <title>Satoshium Library — Knowledge Archive</title>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Library — Knowledge Archive | Satoshium">
+  <meta property="og:description" content="The Satoshium knowledge archive — a growing public collection of videos, essays, papers, whitepapers, and research documenting decentralized intelligence built on the Bitcoin standard.">
+  <meta property="og:url" content="https://satoshium.info/library/">
+  <meta property="og:image" content="https://satoshium.link/assets/seal.png">
+  <meta property="og:site_name" content="Satoshium">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Library — Knowledge Archive | Satoshium">
+  <meta name="twitter:description" content="The Satoshium knowledge archive — a growing public collection of videos, essays, papers, whitepapers, and research documenting decentralized intelligence built on the Bitcoin standard.">
+  <meta name="twitter:image" content="https://satoshium.link/assets/seal.png">
+  <meta name="twitter:site" content="@SatoshiumAI">
 
   <style>
     :root{
@@ -46,25 +63,27 @@
       color:var(--gold);
     }
 
+    a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
+
     .wrap{
       max-width:980px;
       margin:0 auto;
       padding:0 18px;
     }
 
-.wrap.content{
-  opacity:0;
-  transform:translateY(6px);
-  animation:pageEnter .28s cubic-bezier(.22,.61,.36,1) forwards;
-}
+    .wrap.content{
+      opacity:0;
+      transform:translateY(6px);
+      animation:pageEnter .28s cubic-bezier(.22,.61,.36,1) forwards;
+    }
 
-@keyframes pageEnter{
- to{
- opacity:1;
- transform:translateY(0);
- }
-}
-    
+    @keyframes pageEnter{
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
     .content{
       padding:34px 18px 60px;
     }
@@ -90,6 +109,12 @@
       margin:0;
     }
 
+    h3{
+      font-size:16px;
+      color:var(--gold2);
+      margin:0 0 6px;
+    }
+
     .muted{
       color:var(--muted);
     }
@@ -100,12 +125,12 @@
       margin:22px 0;
     }
 
-.grid-2{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px
-}
-    
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
     .pill{
       display:inline-flex;
       align-items:center;
@@ -153,6 +178,10 @@
     .card > *{
       position:relative;
       z-index:1;
+    }
+
+    .grid-2 > .card{
+      margin:0;
     }
 
     .cardhead{
@@ -228,6 +257,19 @@
 
     .library-links a{
       font-weight:700;
+    }
+
+    /* ===== Responsive ===== */
+
+    @media(max-width:600px){
+      .grid-2{grid-template-columns:1fr}
+    }
+
+    /* ===== Reduced motion ===== */
+
+    @media(prefers-reduced-motion:reduce){
+      .wrap.content{animation:none;opacity:1;transform:none}
+      .card{transition:none}
     }
   </style>
 </head>
@@ -341,71 +383,72 @@
       </p>
     </section>
 
-<p></p>
-<div class="card">
+    <div class="card">
 
-<h2>🌐 Explore the Satoshium Universe</h2>
+      <h2>🌐 Explore the Satoshium Universe</h2>
 
-Explore the different layers of Satoshium — from platform and knowledge to experimentation, infrastructure, and real-world expression.
+      <p>
+        Explore the different layers of Satoshium — from platform and knowledge to experimentation, infrastructure, and real-world expression.
+      </p>
 
-<p class="muted">
-The Satoshium ecosystem is organized across multiple domains that represent different layers of the platform.
-</p>
+      <p class="muted">
+        The Satoshium ecosystem is organized across multiple domains that represent different layers of the platform.
+      </p>
 
-<div class="grid-2">
+      <div class="grid-2">
 
-<div class="card">
-<h3>🌐 satoshium.ai</h3>
-<p class="muted">
-Main public platform and primary introduction to the Satoshium ecosystem.
-</p>
-<p><a href="https://satoshium.ai/" target="_blank">Visit →</a></p>
-</div>
+        <div class="card">
+          <h3>🌐 satoshium.ai</h3>
+          <p class="muted">
+            Main public platform and primary introduction to the Satoshium ecosystem.
+          </p>
+          <p><a href="https://satoshium.ai/" target="_blank" rel="noopener">Visit →</a></p>
+        </div>
 
-<div class="card">
-<h3>📚 satoshium.info</h3>
-<p class="muted">
-Knowledge library, education resources, documentation, and long-form reference materials.
-</p>
-<p><a href="https://satoshium.info/" target="_blank">Visit →</a></p>
-</div>
+        <div class="card">
+          <h3>📚 satoshium.info</h3>
+          <p class="muted">
+            Knowledge library, education resources, documentation, and long-form reference materials.
+          </p>
+          <p><a href="https://satoshium.info/" target="_blank" rel="noopener">Visit →</a></p>
+        </div>
 
-<div class="card">
-<h3>🧪 satoshium.xyz</h3>
-<p class="muted">
-Experimental labs, prototypes, and exploratory system concepts.
-</p>
-<p><a href="https://satoshium.xyz/" target="_blank">Visit →</a></p>
-</div>
+        <div class="card">
+          <h3>🧪 satoshium.xyz</h3>
+          <p class="muted">
+            Experimental labs, prototypes, and exploratory system concepts.
+          </p>
+          <p><a href="https://satoshium.xyz/" target="_blank" rel="noopener">Visit →</a></p>
+        </div>
 
-<div class="card">
-<h3>🛰️ satoshium.net</h3>
-<p class="muted">
-Infrastructure layer for network architecture, systems, and service topology.
-</p>
-<p><a href="https://satoshium.net/" target="_blank">Visit →</a></p>
-</div>
+        <div class="card">
+          <h3>🛰️ satoshium.net</h3>
+          <p class="muted">
+            Infrastructure layer for network architecture, systems, and service topology.
+          </p>
+          <p><a href="https://satoshium.net/" target="_blank" rel="noopener">Visit →</a></p>
+        </div>
 
-<div class="card">
-<h3>🛍️ satoshium.store</h3>
-<p class="muted">
-Merchandise and cultural layer for symbolic artifacts representing the Satoshium ecosystem.
-</p>
-<p><a href="https://satoshium.store/" target="_blank">Visit →</a></p>
-</div>
+        <div class="card">
+          <h3>🛍️ satoshium.store</h3>
+          <p class="muted">
+            Merchandise and cultural layer for symbolic artifacts representing the Satoshium ecosystem.
+          </p>
+          <p><a href="https://satoshium.store/" target="_blank" rel="noopener">Visit →</a></p>
+        </div>
 
-<div class="card">
-<h3>🔗 satoshium.link</h3>
-<p class="muted">
-Navigation and routing layer used for directories, entry points, and platform references.
-</p>
-<p><a href="https://satoshium.link/" target="_blank">Visit →</a></p>
-</div>
+        <div class="card">
+          <h3>🔗 satoshium.link</h3>
+          <p class="muted">
+            Navigation and routing layer used for directories, entry points, and platform references.
+          </p>
+          <p><a href="https://satoshium.link/" target="_blank" rel="noopener">Visit →</a></p>
+        </div>
 
-</div>
+      </div>
 
-</div>
-    
+    </div>
+
     <div class="pagefoot">Satoshium Library • Public knowledge layer</div>
 
     <div class="wrap reflection">
