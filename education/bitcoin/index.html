@@ -7,7 +7,25 @@
 <link rel="alternate icon" href="/assets/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#4da3ff">
-<title>Satoshium - Bitcoin Education</title>
+<title>Bitcoin Education | Satoshium</title>
+<meta name="description" content="Bitcoin education hub — learn the fundamentals of Bitcoin as sovereign money, cryptographic verification, self-custody, network security, Lightning scaling, and global settlement.">
+<link rel="canonical" href="https://satoshium.info/education/bitcoin/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bitcoin Education | Satoshium">
+<meta property="og:description" content="Bitcoin education hub — learn the fundamentals of Bitcoin as sovereign money, cryptographic verification, self-custody, network security, Lightning scaling, and global settlement.">
+<meta property="og:url" content="https://satoshium.info/education/bitcoin/">
+<meta property="og:image" content="https://satoshium.link/assets/btc-seal.png">
+<meta property="og:site_name" content="Satoshium">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bitcoin Education | Satoshium">
+<meta name="twitter:description" content="Bitcoin education hub — learn the fundamentals of Bitcoin as sovereign money, cryptographic verification, self-custody, network security, Lightning scaling, and global settlement.">
+<meta name="twitter:image" content="https://satoshium.link/assets/btc-seal.png">
+<meta name="twitter:site" content="@SatoshiumAI">
 
 <style>
 
@@ -62,6 +80,7 @@ body{
 
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -119,7 +138,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -128,6 +147,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -148,17 +169,10 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
-}
-
-.card {
- border: 1px solid rgba(214,163,74,.15);
 }
 
 .muted{
@@ -186,6 +200,13 @@ ul{
 margin:8px 0 0 18px
 }
 
+/* ===== Reduced motion ===== */
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+ .card{transition:none}
+}
+
 </style>
 </head>
 
@@ -202,7 +223,7 @@ margin:8px 0 0 18px
 
 <h1 style="margin-top:12px;">Bitcoin foundations</h1>
 <p class="muted">
-  Bitcoin is the trust layer beneath Satoshium’s long-term vision. This section explains
+  Bitcoin is the trust layer beneath Satoshium's long-term vision. This section explains
   the core ideas behind Bitcoin as sovereign money, cryptographic verification, self-custody,
   network security, and global settlement.
 </p>
@@ -213,7 +234,7 @@ margin:8px 0 0 18px
   <h2 style="margin-top:0;">🧠 Why learn the fundamentals</h2>
 
   <p>
-    Before exploring Bitcoin’s role inside Satoshium, it helps to understand the basics:
+    Before exploring Bitcoin's role inside Satoshium, it helps to understand the basics:
     what Bitcoin is, why it exists, how it works, and why verifiable rules matter.
   </p>
 
@@ -266,7 +287,7 @@ margin:8px 0 0 18px
   <h2 style="margin-top:0;">🛡️ Wallets &amp; Security</h2>
 
   <p>
-    Bitcoin’s power depends on ownership and security. These guides cover buying and storing
+    Bitcoin's power depends on ownership and security. These guides cover buying and storing
     bitcoin, hot vs cold storage, seed phrase protection, and common mistakes to avoid.
   </p>
 
@@ -314,7 +335,7 @@ margin:8px 0 0 18px
   <h2 style="margin-top:0;">⚡ Lightning &amp; Scaling</h2>
 
   <p>
-    Bitcoin’s base layer is strong but intentionally conservative. These guides introduce
+    Bitcoin's base layer is strong but intentionally conservative. These guides introduce
     Lightning and other scaling concepts that help Bitcoin support faster payments and broader use.
   </p>
 
@@ -358,6 +379,7 @@ margin:8px 0 0 18px
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
