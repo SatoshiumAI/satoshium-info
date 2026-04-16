@@ -7,8 +7,25 @@
   <link rel="alternate icon" href="https://satoshium.info/assets/favicon.ico">
   <link rel="apple-touch-icon" href="https://satoshium.info/assets/apple-touch-icon.png">
   <meta name="theme-color" content="#4da3ff">
+  <title>Video Library — Cinematic Archive | Satoshium</title>
+  <meta name="description" content="The Satoshium cinematic archive — public film entries and visual releases documenting a quieter future built on Bitcoin-governed intelligence.">
+  <link rel="canonical" href="https://satoshium.info/library/videos/">
 
-  <title>Satoshium Video Library — Cinematic Archive</title>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Video Library — Cinematic Archive | Satoshium">
+  <meta property="og:description" content="The Satoshium cinematic archive — public film entries and visual releases documenting a quieter future built on Bitcoin-governed intelligence.">
+  <meta property="og:url" content="https://satoshium.info/library/videos/">
+  <meta property="og:image" content="https://satoshium.link/assets/seal.png">
+  <meta property="og:site_name" content="Satoshium">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Video Library — Cinematic Archive | Satoshium">
+  <meta name="twitter:description" content="The Satoshium cinematic archive — public film entries and visual releases documenting a quieter future built on Bitcoin-governed intelligence.">
+  <meta name="twitter:image" content="https://satoshium.link/assets/seal.png">
+  <meta name="twitter:site" content="@SatoshiumAI">
 
   <style>
     :root{
@@ -46,6 +63,8 @@
       color:var(--gold);
     }
 
+    a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
+
     .wrap{
       max-width:980px;
       margin:0 auto;
@@ -64,7 +83,7 @@
  transform:translateY(0);
  }
 }
-    
+
     .content{
       padding:34px 18px 60px;
     }
@@ -222,6 +241,13 @@
 
     .library-links a{
       font-weight:700;
+    }
+
+    /* ===== Reduced motion ===== */
+
+    @media(prefers-reduced-motion:reduce){
+      .wrap.content{animation:none;opacity:1;transform:none}
+      .card{transition:none}
     }
   </style>
 </head>
