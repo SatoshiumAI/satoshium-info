@@ -7,7 +7,25 @@
   <link rel="alternate icon" href="/assets/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <meta name="theme-color" content="#4da3ff">
-  <title>Satoshium — What is Bitcoin?</title>
+  <title>What is Bitcoin? | Satoshium</title>
+  <meta name="description" content="Bitcoin is digital money with rules, not rulers. Learn what Bitcoin is, why it exists, how it works, and why Satoshium builds on its principles of verifiable truth and decentralized trust.">
+  <link rel="canonical" href="https://satoshium.info/education/bitcoin/what-is-bitcoin.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="What is Bitcoin? | Satoshium">
+  <meta property="og:description" content="Bitcoin is digital money with rules, not rulers. Learn what Bitcoin is, why it exists, how it works, and why Satoshium builds on its principles of verifiable truth and decentralized trust.">
+  <meta property="og:url" content="https://satoshium.info/education/bitcoin/what-is-bitcoin.html">
+  <meta property="og:image" content="https://satoshium.link/assets/btc-seal.png">
+  <meta property="og:site_name" content="Satoshium">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What is Bitcoin? | Satoshium">
+  <meta name="twitter:description" content="Bitcoin is digital money with rules, not rulers. Learn what Bitcoin is, why it exists, how it works, and why Satoshium builds on its principles of verifiable truth and decentralized trust.">
+  <meta name="twitter:image" content="https://satoshium.link/assets/btc-seal.png">
+  <meta name="twitter:site" content="@SatoshiumAI">
 
 <style>
 
@@ -42,9 +60,10 @@ body{
  margin-bottom:40px;
  color:var(--muted);
 }
- 
+
 a{color:var(--gold2);text-decoration:none}
 a:hover{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
 
 .wrap{max-width:980px;margin:0 auto;padding:0 18px}
 
@@ -104,7 +123,7 @@ rgba(12,16,24,.94),
 rgba(12,16,24,.88)
 );
 
-border:1px solid var(--line);
+border:1px solid rgba(214,163,74,.15);
 border-radius:16px;
 
 padding:16px 16px;
@@ -113,6 +132,8 @@ margin:16px 0;
 box-shadow:
 0 0 0 1px rgba(214,163,74,.08),
 0 20px 50px rgba(0,0,0,.45);
+
+transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .card::before{
@@ -133,26 +154,13 @@ z-index:0;
 position:relative;
 z-index:1
 }
-.card {
-  transition: transform .18s ease, box-shadow .18s ease;
-}
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
 }
 
-.card {
- border: 1px solid rgba(214,163,74,.15);
-}
-
 .muted{
-color:var(--muted)
-}
-
-.footer{
-border-top:1px solid var(--line);
-padding:18px 0 32px;
 color:var(--muted)
 }
 
@@ -173,6 +181,58 @@ font-weight:700
 
 ul{
 margin:8px 0 0 18px
+}
+
+/* ===== Rich markup ===== */
+
+.kicker{
+font-size:11px;
+text-transform:uppercase;
+letter-spacing:.08em;
+color:var(--muted);
+margin-bottom:2px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+@media(max-width:760px){
+.grid{grid-template-columns:1fr}
+}
+
+.quote{
+border-left:3px solid var(--gold);
+padding:8px 12px;
+margin:14px 0 0;
+color:var(--muted);
+font-style:italic;
+}
+
+.btnrow{
+font-size:13px;
+color:var(--muted);
+margin-top:12px;
+}
+.btn{
+color:var(--gold2);
+font-weight:600;
+}
+.btn:hover{
+color:var(--gold);
+}
+
+.tiny{
+font-size:12px;
+color:var(--muted);
+}
+
+/* ===== Reduced motion ===== */
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+ .card{transition:none}
 }
 
 </style>
@@ -246,7 +306,7 @@ margin:8px 0 0 18px
 
       <h3>1) The blockchain</h3>
       <p class="muted">
-        Think of the blockchain as a public notebook where transactions are recorded in “blocks.”
+        Think of the blockchain as a public notebook where transactions are recorded in "blocks."
         Each new block is linked to the previous one, making history extremely hard to rewrite.
       </p>
 
@@ -265,7 +325,7 @@ margin:8px 0 0 18px
       <h3>4) Nodes and verification</h3>
       <p class="muted">
         Anyone can run a Bitcoin node to independently verify the rules and the ledger.
-        Nodes are how the network resists manipulation: <b>don’t trust — verify.</b>
+        Nodes are how the network resists manipulation: <b>don't trust — verify.</b>
       </p>
     </div>
 
@@ -278,7 +338,7 @@ margin:8px 0 0 18px
       <ul>
         <li><b>Predictable rules</b> instead of changing policies</li>
         <li><b>Final settlement</b> without permission</li>
-        <li><b>Ownership</b> that can’t be diluted by printing</li>
+        <li><b>Ownership</b> that can't be diluted by printing</li>
         <li><b>Global portability</b> across borders and generations</li>
       </ul>
     </div>
@@ -313,14 +373,14 @@ margin:8px 0 0 18px
   <ul>
     <li><b>Bitcoin</b> gives truth, scarcity, and ownership you can verify.</li>
     <li><b>AI</b> gives builders leverage — research, planning, code, and execution.</li>
-    <li><b>Satoshium</b> exists to extend Bitcoin’s “verify truth” model into intelligence: agents governed by rules, not whims.</li>
+    <li><b>Satoshium</b> exists to extend Bitcoin's "verify truth" model into intelligence: agents governed by rules, not whims.</li>
   </ul>
   <div class="btnrow">
-    <a class="btn" href="https://satoshium.ai/start-here/origins.html">Read Satoshium Origins</a> | 
+    <a class="btn" href="https://satoshium.ai/start-here/origins.html">Read Satoshium Origins</a> |
     <a class="btn" href="https://satoshium.ai/updates/">See the Updates</a>
   </div>
 </div>
-   
+
     <div class="card">
       <div class="kicker">Learn more (expands into future pages)</div>
       <h2 style="margin-top:8px;">Explore Bitcoin topics</h2>
@@ -371,9 +431,9 @@ margin:8px 0 0 18px
       </div>
 
       <div class="btnrow">
-        <a class="btn" href="https://satoshium.info/education/bitcoin/what-is-satoshium.html">What is Satoshium?</a> | 
-        <a href="https://satoshium.info/education/bitcoin/">Back to Bitcoin</a> | 
-        <a class="btn" href="https://satoshium.xyz/labs/index.html">Try the Demos</a> | 
+        <a class="btn" href="https://satoshium.info/education/bitcoin/what-is-satoshium.html">What is Satoshium?</a> |
+        <a href="https://satoshium.info/education/bitcoin/">Back to Bitcoin</a> |
+        <a class="btn" href="https://satoshium.xyz/labs/index.html">Try the Demos</a> |
         <a class="btn" href="https://satoshium.ai/updates.html">View the Updates</a>
       </div>
 
@@ -382,8 +442,7 @@ margin:8px 0 0 18px
       </p>
     </div>
 
-                <!-- Footer mission statement + links -->
-</main>                     
+</main>
 <div class="wrap reflection">
 <hr />
 <div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
@@ -392,6 +451,7 @@ margin:8px 0 0 18px
 <hr />
 
 <div id="footer-container"></div>
+</div>
 
 <script src="https://satoshium.link/assets/sayings.js"></script>
 <script>
