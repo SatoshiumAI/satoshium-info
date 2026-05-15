@@ -1,1 +1,415 @@
-test
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="alternate icon" href="/assets/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4da3ff">
+<title>Fiat Timeline | The Two Wallets | Satoshium Education</title>
+<meta name="description" content="Choose a starting year for your Bitcoin wallet journey within The Two Wallets educational experience.">
+<link rel="canonical" href="https://satoshium.info/education/money/bitcoin/years/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bitcoin Timeline | The Two Wallets | Satoshium Education">
+<meta property="og:description" content="Choose a starting year for your Bitcoin wallet journey within The Two Wallets educational experience.">
+<meta property="og:url" content="https://satoshium.info/education/money/bitcoin/years/">
+<meta property="og:image" content="https://satoshium.link/assets/seal.png">
+<meta property="og:site_name" content="Satoshium">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bitcoin Timeline | The Two Wallets | Satoshium Education">
+<meta name="twitter:description" content="Choose a starting year for your Bitcoin wallet journey within The Two Wallets educational experience.">
+<meta name="twitter:image" content="https://satoshium.link/assets/seal.png">
+<meta name="twitter:site" content="@SatoshiumAI">
+
+<style>
+
+:root{
+ --card-wm: url('https://satoshium.link/assets/btc-seal.png');
+ --bg:#07090d;
+ --panel:#0c1018;
+ --text:#e8edf7;
+ --muted:#9aa7bd;
+ --gold:#d6a34a;
+ --gold2:#f4c36a;
+ --line:rgba(214,163,74,.18);
+ --orange:#ff8a3d;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+margin:0;
+padding:0;
+background:var(--bg);
+color:var(--text);
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+line-height:1.55
+}
+
+body{
+padding-top:80px;
+}
+
+.reflection{
+margin-top:40px;
+margin-bottom:40px;
+color:var(--muted);
+}
+
+.wrap{
+max-width:1080px;
+margin:0 auto;
+padding:0 18px;
+}
+
+.wrap.content{
+opacity:0;
+transform:translateY(6px);
+animation:pageEnter .28s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+@keyframes pageEnter{
+ to{
+ opacity:1;
+ transform:translateY(0);
+ }
+}
+
+.content{
+padding:34px 18px 60px
+}
+
+h1,h2{
+margin:0 0 10px
+}
+
+h1{
+font-size:38px;
+line-height:1.15;
+color:var(--gold2)
+}
+
+h2{
+font-size:20px;
+color:var(--gold2);
+margin-top:0
+}
+
+p{
+color:var(--text)
+}
+
+hr{
+border:none;
+border-top:1px solid var(--line);
+margin:22px 0
+}
+
+.card{
+position: relative;
+overflow: hidden;
+background: linear-gradient(
+to bottom right,
+rgba(12,16,24,.94),
+rgba(12,16,24,.88)
+);
+border:1px solid rgba(214,163,74,.15);
+border-radius:16px;
+padding:22px;
+margin:16px 0;
+box-shadow:
+0 0 0 1px rgba(214,163,74,.08),
+0 20px 50px rgba(0,0,0,.45);
+}
+
+.card::before{
+content:"";
+position:absolute;
+inset:-60px;
+background-image: var(--card-wm);
+background-repeat:no-repeat;
+background-size: min(720px, 70vw);
+background-position: right -140px center;
+opacity:0.028;
+filter: blur(1px);
+pointer-events:none;
+z-index:0;
+}
+
+.card > *{
+position:relative;
+z-index:1
+}
+
+.muted{
+color:var(--muted)
+}
+
+.status-pill{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:8px 12px;
+border:1px solid rgba(255,138,61,.30);
+border-radius:999px;
+background:rgba(255,138,61,.11);
+color:var(--gold2);
+font-size:12px;
+font-weight:800;
+letter-spacing:.01em
+}
+
+.timeline-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:14px;
+margin-top:24px;
+}
+
+.timeline-card{
+border:1px solid rgba(214,163,74,.14);
+border-radius:14px;
+background:rgba(7,9,13,.48);
+padding:18px;
+text-align:center;
+}
+
+.timeline-card h2{
+font-size:22px;
+margin-bottom:8px;
+}
+
+.timeline-card p{
+margin:0;
+font-size:13px;
+color:var(--muted);
+}
+
+.coming-soon{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+margin-top:12px;
+padding:6px 10px;
+border-radius:999px;
+font-size:11px;
+font-weight:800;
+background:rgba(255,138,61,.12);
+border:1px solid rgba(255,138,61,.24);
+color:var(--gold2);
+}
+
+.choice-row{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:26px;
+}
+
+.choice-pill{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 13px;
+border:1px solid var(--line);
+border-radius:999px;
+background:rgba(214,163,74,.08);
+color:var(--gold2);
+font-size:13px;
+font-weight:800;
+text-decoration:none;
+}
+
+.choice-pill:hover{
+background:rgba(214,163,74,.14);
+}
+
+@media(max-width:760px){
+ h1{font-size:30px}
+ .card{padding:18px}
+}
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+}
+
+</style>
+</head>
+
+<body id="top">
+
+<div id="topbar-slot" data-topbar="platform"></div>
+<script src="/components/topbar-loader.js"></script>
+
+<main class="wrap content">
+
+<div class="status-pill">🟢 Fiat Timeline • Under Construction</div>
+
+<div class="card" style="margin-top:16px;">
+
+<h1>Choose a Starting Year</h1>
+
+<p class="muted" style="font-size:16px; max-width:860px;">
+Every monetary journey begins at a different moment in time.
+</p>
+
+<p>
+The Two Wallets experience compares how purchasing power evolves when one wallet remains in Fiat while another follows Bitcoin across time.
+</p>
+
+<p>
+Choose a future starting year below to explore how the same initial savings may evolve differently across housing, groceries, tuition, transportation, and long-term purchasing power.
+</p>
+
+<p>
+This educational timeline is currently being built one year at a time.
+</p>
+
+<div class="timeline-grid">
+
+<div class="timeline-card">
+<h2>2009</h2>
+<p>Global financial systems face instability and rising distrust.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2010</h2>
+<p>Digital finance and online payments continue evolving.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2011</h2>
+<p>Public conversations around money and banking slowly expand online.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2012</h2>
+<p>Mobile technology increasingly reshapes financial access.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2013</h2>
+<p>Alternative ideas about money and savings gain visibility.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2014</h2>
+<p>Digital commerce and global connectivity continue accelerating.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2015</h2>
+<p>Financial technology becomes more integrated into daily life.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2016</h2>
+<p>Questions about savings, debt, and purchasing power intensify.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2017</h2>
+<p>Public interest in alternative financial systems grows rapidly.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2018</h2>
+<p>Discussions around digital assets and financial sovereignty continue evolving.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2019</h2>
+<p>Online financial infrastructure expands across global markets.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2020</h2>
+<p>Global monetary expansion reshapes economic discussions worldwide.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2021</h2>
+<p>Institutional attention toward digital financial systems increases.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2022</h2>
+<p>Inflation and savings concerns reach mainstream attention.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2023</h2>
+<p>Debates around savings, trust, and monetary systems continue globally.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2024</h2>
+<p>Long-term conversations about money and financial resilience continue expanding.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2025</h2>
+<p>Digital financial systems continue maturing alongside traditional infrastructure.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+<div class="timeline-card">
+<h2>2026</h2>
+<p>The future relationship between money, technology, and trust remains actively debated.</p>
+<div class="coming-soon">Coming Soon</div>
+</div>
+
+</div>
+
+<div class="choice-row">
+<a class="choice-pill" href="https://satoshium.info/education/money/fiat/">← Back to Fiat Perspective</a>
+<a class="choice-pill" href="https://satoshium.info/education/money/">Back to The Two Wallets</a>
+</div>
+
+</div>
+
+</main>
+
+<div class="wrap reflection">
+<hr />
+<div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
+  Satoshium is being built slowly, in public, and with architectural discipline.
+</div>
+<hr />
+
+<div id="footer-container"></div>
+</div>
+
+<script src="https://satoshium.link/assets/sayings.js"></script>
+<script>
+fetch("https://satoshium.link/components/footer.html")
+ .then(response => response.text())
+ .then(data => {
+ document.getElementById("footer-container").innerHTML = data;
+ });
+</script>
+</body>
+</html>
+```
