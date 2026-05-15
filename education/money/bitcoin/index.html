@@ -1,0 +1,327 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="alternate icon" href="/assets/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4da3ff">
+<title>Bitcoin Perspective | Bitcoin vs Fiat | Satoshium Education</title>
+<meta name="description" content="Explore the Bitcoin-first educational path within the Satoshium Bitcoin vs Fiat experience.">
+<link rel="canonical" href="https://satoshium.info/education/money/bitcoin/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bitcoin Perspective | Bitcoin vs Fiat | Satoshium Education">
+<meta property="og:description" content="Explore the Bitcoin-first educational path within the Satoshium Bitcoin vs Fiat experience.">
+<meta property="og:url" content="https://satoshium.info/education/money/bitcoin/">
+<meta property="og:image" content="https://satoshium.link/assets/seal.png">
+<meta property="og:site_name" content="Satoshium">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bitcoin Perspective | Bitcoin vs Fiat | Satoshium Education">
+<meta name="twitter:description" content="Explore the Bitcoin-first educational path within the Satoshium Bitcoin vs Fiat experience.">
+<meta name="twitter:image" content="https://satoshium.link/assets/seal.png">
+<meta name="twitter:site" content="@SatoshiumAI">
+
+<style>
+
+:root{
+ --card-wm: url('https://satoshium.link/assets/btc-seal.png');
+ --bg:#07090d;
+ --panel:#0c1018;
+ --text:#e8edf7;
+ --muted:#9aa7bd;
+ --gold:#d6a34a;
+ --gold2:#f4c36a;
+ --line:rgba(214,163,74,.18);
+ --green:#41d690;
+ --orange:#ff8a3d;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+margin:0;
+padding:0;
+background:var(--bg);
+color:var(--text);
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+line-height:1.55
+}
+
+body{
+padding-top:80px;
+}
+
+.reflection{
+margin-top:40px;
+margin-bottom:40px;
+color:var(--muted);
+}
+
+.wrap{
+max-width:1080px;
+margin:0 auto;
+padding:0 18px;
+}
+
+.wrap.content{
+opacity:0;
+transform:translateY(6px);
+animation:pageEnter .28s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+@keyframes pageEnter{
+ to{
+ opacity:1;
+ transform:translateY(0);
+ }
+}
+
+.content{
+padding:34px 18px 60px
+}
+
+h1,h2{
+margin:0 0 10px
+}
+
+h1{
+font-size:36px;
+line-height:1.15;
+color:var(--gold2)
+}
+
+h2{
+font-size:22px;
+color:var(--gold2);
+margin-top:26px
+}
+
+p{
+color:var(--text)
+}
+
+hr{
+border:none;
+border-top:1px solid var(--line);
+margin:22px 0
+}
+
+.card{
+position: relative;
+overflow: hidden;
+background: linear-gradient(
+to bottom right,
+rgba(12,16,24,.94),
+rgba(12,16,24,.88)
+);
+border:1px solid rgba(214,163,74,.15);
+border-radius:16px;
+padding:22px;
+margin:16px 0;
+box-shadow:
+0 0 0 1px rgba(214,163,74,.08),
+0 20px 50px rgba(0,0,0,.45);
+}
+
+.card::before{
+content:"";
+position:absolute;
+inset:-60px;
+background-image: var(--card-wm);
+background-repeat:no-repeat;
+background-size: min(720px, 70vw);
+background-position: right -140px center;
+opacity:0.028;
+filter: blur(1px);
+pointer-events:none;
+z-index:0;
+}
+
+.card > *{
+position:relative;
+z-index:1
+}
+
+.muted{
+color:var(--muted)
+}
+
+.pill{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:8px 10px;
+border:1px solid var(--line);
+border-radius:999px;
+background:rgba(214,163,74,.08);
+color:var(--gold2);
+font-size:12px;
+font-weight:700
+}
+
+.status-pill{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:8px 12px;
+border:1px solid rgba(255,138,61,.30);
+border-radius:999px;
+background:rgba(255,138,61,.11);
+color:var(--gold2);
+font-size:12px;
+font-weight:800;
+letter-spacing:.01em
+}
+
+.path-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+margin-top:22px;
+}
+
+.path-card{
+border:1px solid rgba(214,163,74,.14);
+border-radius:14px;
+background:rgba(7,9,13,.48);
+padding:18px;
+}
+
+.path-card h2{
+margin-top:0;
+}
+
+.choice-row{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:22px;
+}
+
+.choice-pill{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 13px;
+border:1px solid var(--line);
+border-radius:999px;
+background:rgba(214,163,74,.08);
+color:var(--gold2);
+font-size:13px;
+font-weight:800;
+text-decoration:none;
+}
+
+.choice-pill:hover{
+background:rgba(214,163,74,.14);
+}
+
+.green-dot,.orange-dot{
+width:10px;
+height:10px;
+border-radius:50%;
+display:inline-block;
+box-shadow:0 0 14px currentColor;
+}
+
+.green-dot{background:var(--green);color:var(--green)}
+.orange-dot{background:var(--orange);color:var(--orange)}
+
+@media(max-width:760px){
+ h1{font-size:30px}
+ .path-grid{grid-template-columns:1fr}
+ .card{padding:18px}
+}
+
+@media(prefers-reduced-motion:reduce){
+ .wrap.content{animation:none;opacity:1;transform:none}
+}
+
+</style>
+</head>
+
+<body id="top">
+
+<div id="topbar-slot" data-topbar="platform"></div>
+<script src="/components/topbar-loader.js"></script>
+
+<main class="wrap content">
+
+<div class="status-pill">🟠 Bitcoin Perspective • The Two Wallets</div>
+
+<div class="card" style="margin-top:16px;">
+
+<h1>Begin with the Fixed-Supply System</h1>
+
+<p class="muted" style="font-size:16px; max-width:820px;">
+This educational path begins with Bitcoin as a different kind of monetary design.
+</p>
+
+<p>
+Bitcoin introduces a savings system built around fixed supply, public rules,
+and long-term scarcity. Instead of expanding by policy decision, Bitcoin follows
+an issuance schedule that anyone can verify.
+</p>
+
+<p>
+As you continue through this experience, you will compare how Bitcoin and Fiat approach
+saving, purchasing power, inflation, ownership, trust, and the future of money.
+</p>
+
+<div class="path-grid">
+
+<div class="path-card">
+<h2><span class="orange-dot"></span> Bitcoin Perspective</h2>
+<p>
+Explore how Bitcoin prioritizes scarcity, self-custody, open verification,
+and long-term preservation across time.
+</p>
+</div>
+
+<div class="path-card">
+<h2><span class="green-dot"></span> Fiat Counterpoint</h2>
+<p>
+Compare Bitcoin against the familiar Fiat system used for everyday transactions,
+liquidity, banking, and economic coordination.
+</p>
+</div>
+
+</div>
+
+<div class="choice-row">
+<a class="choice-pill" href="https://satoshium.info/education/money/">← Back to The Two Wallets</a>
+<a class="choice-pill" href="https://satoshium.info/education/money/bitcoin/01-savings/">Continue to Savings →</a>
+</div>
+
+</div>
+
+</main>
+
+<div class="wrap reflection">
+<hr />
+<div id="random-saying" class="muted" style="margin-bottom:14px; max-width:760px;">
+  Satoshium is being built slowly, in public, and with architectural discipline.
+</div>
+<hr />
+
+<div id="footer-container"></div>
+</div>
+
+<script src="https://satoshium.link/assets/sayings.js"></script>
+<script>
+fetch("https://satoshium.link/components/footer.html")
+ .then(response => response.text())
+ .then(data => {
+ document.getElementById("footer-container").innerHTML = data;
+ });
+</script>
+</body>
+</html>
+```
